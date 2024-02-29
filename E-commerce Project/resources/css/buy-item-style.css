@@ -1,5 +1,32 @@
+
+.buy-form {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
 .counter {
     display: flex;
+    flex-direction: column;
     justify-content: start;
-    align-items: center;
+    align-items: start;
 }
+
+label {
+    font-weight: bold;
+    margin: 0px 10px;
+}
+
+input[readonly] {
+    border: none;
+    background-color: #ececec;
+}
+
+input[type="number"]{
+   border-radius: 0.2rem;
+   width: 50px;
+}
+
+/* h5 {
+    margin: 20px 0px 5px;
+} */
