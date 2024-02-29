@@ -14,8 +14,8 @@ header{
 }
 
 .title {
-    font-size: 50px;
-    margin-bottom: 30px;
+    font-size: 30px;
+    padding: 1.5rem 0.5rem 0rem;
     letter-spacing: 0.2rem;
 }
 
@@ -34,3 +34,30 @@ nav .nav-ul{
     color: #0e1424;
     font-size: 13px;
 }
+
+.history-table {
+    margin: 1.5rem 0.8rem 1rem;
+
+    thead {
+        background-color: #0e1424;
+        color: #ececec;
+    }
+
+    th, td{
+        padding: 0.5rem;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+
+}
+
+footer {
+    padding: 0.5rem;
+}
+
+.links{
+    display: flex;
+    justify-content:space-around;
+    margin-bottom: 0.5rem;
+}
+
