@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Purchase an Item</title>
+    <link rel="stylesheet" href="./resources/css/common-style.css">
+    <link rel="stylesheet" href="./resources/css/buy-item-style.css">
 </head>
 <body>
-    <header>
-        <h1>Purchase an Item</h1>
-    </header>
+    
     <hr>
     <nav>
         <ul class="nav-ul">
@@ -23,8 +23,32 @@
         </ul>
      </nav>
 
+     <header>
+        <h1>Purchase an Item</h1>
+    </header>
+
      <main>
-        
+        <form action="" class="buy-form">
+            <div>
+                <label for="name">Full name</label>
+                <input type="text" value="name" name="name" id="name" readonly>
+            </div>
+            <div class="counter">
+                <img src="./resources/img/logicLine.jpeg" alt="" width="30%">
+                <label for="quantity">Quantity</label>
+                <input type="number" value="1" name="quantity" id="quantity" min="1">
+            </div>
+            <div>
+                <label for="price">Total Price</label>
+                <input type="number" value="100" name="price" id="price" readonly>
+            </div>          
+            <div>
+                <label for="balance">Balance</label>
+                <input type="number" value="100" name="balance" id="balance" readonly>
+            </div>        
+            <input type="submit" value="Purchase" class="btn">
+            
+        </form>
      </main>
 
      <footer>
