@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login to LogicLine</title>
+    <title>Login | LogicLine</title>
     <script src="https://kit.fontawesome.com/0cd70ca65d.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./resources/css/common-style.css">
     <link rel="stylesheet" href="./resources/css/login.css">
@@ -11,16 +11,33 @@
     
 </head>
 <body>
-    <h1 class="title">Login to Shoppify</h1>
-    <h2>Welcome back! Please login to your account.</h2>
-    <form action="" method="">
-        <label for="">User Name</label>
-        <input type="text" required>
-      
-        <label for="">Password</label>
-        <input type="password" required>
-
-        <input type="submit" value="Login">
-    </form>
+    <header>
+        <img src="./resources/icons/cpu.png" alt="chip" id="login-icon">
+        <div class="heading">
+            <h1 class="title">Login to LogicLine</h1>
+            <h2>Welcome back! Please login to your account.</h2>
+        </div>
+    </header>
+    <main>
+        <form action="" method="">
+            <label for="username">User Name</label>
+            <input type="text" id="username" placeholder="Enter your user name" required>
+          
+            <label for="password">Password</label>
+            <input type="password" required id="password" placeholder="Enter your password">
+    
+            <input type="submit" value="Login">
+        </form>
+    </main>
+    
+    <footer>
+        <p> LogicLine &copy; 2024 All Rights Reserved </p>
+        <p>Follow us on Social Media</p>
+        <div class="footer-icons">
+            <i class="fa-brands fa-square-facebook"></i>
+            <i class="fa-brands fa-square-instagram"></i>
+            <i class="fa-brands fa-square-x-twitter"></i>
+        </div>
+    </footer>
 </body>
 </html>

@@ -12,6 +12,7 @@
     text-decoration: none;
     font-family: "Varela Round", sans-serif;
     font-style: normal;
+    font-weight: 600;
 }
 
 body{
@@ -43,5 +44,20 @@ nav .nav-ul{
 .title {
     font-size: 50px;
     letter-spacing: 0.2rem;
+}
+
+footer{
+    background-color: #adbbc6; 
+    text-align: center;
+    
+    p{
+        padding: 0.5rem;
+    }
+
+    .fa-brands{
+       font-size: 30px;
+       cursor: pointer;
+    }
+
 }
 /* :root might be used also */
