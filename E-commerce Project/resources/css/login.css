@@ -1,1 +1,48 @@
 /* Styling for login only */
+
+.title {
+    margin: 3rem;
+    text-align: center;
+}
+
+h2{
+    text-align: center;
+    color: #8a8fa3;
+    font-size: 18px;
+
+}
+form{
+    padding: 3rem;
+    display: grid;
+    grid-template-columns: 4fr;
+    row-gap: 1rem;
+    justify-items: center; 
+}
+
+label{
+    width: 70%;
+    font-weight: 700;
+    font-size: 20px;
+    text-align: left;
+}
+
+
+input {
+    font-weight: 700;
+    font-size: 20px;
+    border-radius: 15px;
+    border: 1px solid #8a8fa35c;
+    padding: 1rem;
+    background-color: #8a8fa38f ;
+    width:70%;
+    place-items: center;
+}
+
+input[type="submit"] {
+    width: fit-content;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    color: #ececec;
+    background-color: #0e1424;
+
+}
