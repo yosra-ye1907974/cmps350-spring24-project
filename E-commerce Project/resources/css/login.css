@@ -74,6 +74,13 @@ body{
                 cursor: pointer;
             }
 
+            input[type="submit"]:hover{
+                font-size: 30px;
+                color: var(--text--color);
+                background-color: var(--background--color);
+            }
+           
+
         }
     }
 
