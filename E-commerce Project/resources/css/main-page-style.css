@@ -21,10 +21,6 @@ body{
             margin-bottom: 15px;
         }
     }
-    
-    nav{
-        background-color: var(--secondary--color);
-    }
 
     .main-section{
         padding: 2rem;
