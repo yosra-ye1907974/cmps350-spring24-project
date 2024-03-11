@@ -1,0 +1,11 @@
+{
+  "users":[
+    {"username":"nashwa", "password":"1234", "role":"admin"},
+ 
+    {"firstName": "yosra", "lastName": "elshayeb","username":"yosra", "password":"1234", "balance":"100",
+    "shippingAddress": {"city": "doha", "buildingNo": "4", "streetNo": "260"}, "role": "customer"},
+
+    {"username":"zahraa", "password":"1234", "companyName": "shein","bankAccount": "xyz" ,"role": "seller"}
+  ]
+
+}
