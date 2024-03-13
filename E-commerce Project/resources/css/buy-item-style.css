@@ -46,7 +46,10 @@ main {
     column-gap: 15px;
     background-color: #e0e2e5;
 }
-
+.btn {
+    padding: 5px;
+    border-radius: 0.5rem;
+}
 label {
     font-weight: bold;
     margin: 0px 10px;
