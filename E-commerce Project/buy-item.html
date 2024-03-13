@@ -4,72 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Purchase an Item</title>
+    <link rel="icon" type="image/x-icon" href="./resources/icons/favicon.ico">
     <link rel="stylesheet" href="./resources/css/common-style.css">
     <link rel="stylesheet" href="./resources/css/buy-item-style.css">
 </head>
 <body>
     
-    <hr>
     <nav>
         <ul class="nav-ul">
             <li><a href="./main-page.html">Home</a></li>
             <li><a href="./login-page.html">Login</a></li>
-            <li><a href="#mission">Mission</a></li>
-            <li><a href="#vision">Vision</a></li>
             <li><a href="#products">Our Products</a></li>
             <li><a href="./purchase-history.html">Purchase History</a></li>
-            <li><a href="#sell-item">Sell Item</a></li>
-
         </ul>
      </nav>
 
-     <header>
-        <h1>Purchase an Item</h1>
-    </header>
-
      <main>
+        <h1>Continue Your Purchase</h1>
+
         <form action="" class="buy-form">
-            <!-- <h5>Customer's Info</h5> -->
-            <div>
-                <label for="name">Full name</label>
-                <input type="text" value="name" name="name" id="name" readonly>
-            </div>
-
             <!-- <h5>Product's Info</h5> -->
-            <div class="counter">
+            <div class="card">
                 <img src="./resources/img/logicLine.jpeg" alt="" width="30%">
-                <label for="quantity">Quantity</label>
-                <input type="number" value="1" name="quantity" id="quantity" min="1">
+                <div>
+                    <div>
+                        <label for="name">product name</label>
+                        <input type="text" name="name" id="name" placeholder="placeholder" readonly>
+                    </div>
+                    <div>
+                        <label for="quantity">Quantity</label>
+                        <input type="number" value="1" name="quantity" id="quantity" min="1">
+                    </div>   
+                </div>
             </div>
-
             <!-- <h5>Check out</h5> -->
-            <div>
-                <label for="price">Total Price</label>
-                <input type="number" value="100" name="price" id="price" readonly>
-            </div>          
-            <div>
-                <label for="balance">Balance</label>
-                <input type="number" value="100" name="balance" id="balance" readonly>
-            </div>        
-            <input type="submit" value="Purchase" class="btn">
-            
+            <div class="purchase">
+                <div>
+                    <label for="price">Total Price</label>
+                    <input type="number" value="100" name="price" id="price" readonly>
+                </div>                 
+                <input type="submit" value="Purchase" class="btn"> 
+            </div>  
         </form>
      </main>
 
      <footer>
         <!-- aside? -->
-        <ul>
+        <ul class="links">
             <li><a href="">Help</a></li>
             <li><a href="">Contact Us</a></li>
             <li><a href="">Terms & Conditions</a></li>
         </ul>
 
         <p> LogicLine &copy; 2024 All Rights Reserved </p>
-        <p>Follow us on Social Media</p>
-        <i class="fa-brands fa-square-facebook"></i>
-        <i class="fa-brands fa-square-instagram"></i>
-        <i class="fa-brands fa-square-x-twitter"></i>
-
     </footer>
 </body>
 </html>
