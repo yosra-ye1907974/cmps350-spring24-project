@@ -1,16 +1,7 @@
 
-
-
-header{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    text-align: center;
-    padding: 1rem;
-    background-color: #adbbc6;
-    img{
-       width: 40%;
-    }
+body{
+    display: grid;
+    grid-template-rows: auto 1fr auto;
 }
 
 .title {
@@ -37,7 +28,7 @@ nav .nav-ul{
 
 .history-table {
     margin: 1.5rem 0.8rem 1rem;
-
+    width: 90%;
     thead {
         background-color: #0e1424;
         color: #ececec;
@@ -59,5 +50,8 @@ footer {
     display: flex;
     justify-content:space-around;
     margin-bottom: 0.5rem;
+    a {
+        color: #0e1424;
+    }
 }
 
