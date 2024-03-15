@@ -3,9 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="./resources/css/common-style.css">
+    <script src="https://kit.fontawesome.com/0cd70ca65d.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/x-icon" href="./resources/icons/favicon.ico">
+    <!-- use case 6 -->
+    <title>Sell Item</title>
 </head>
 <body>
-    
+
+    <!-- seller must be logged in -->
+    <nav>
+        <ul class="nav-ul">
+            <li><a href="./main-page.html">Home</a></li>
+            <li><a href="./seller-dashboard.html">Seller Dashboard</a></li>
+            <!-- <li><a href="./login-page.html">Login</a></li>
+            <li><a href="#products">Our Products</a></li>
+            <li><a href="./purchase-history.html">Purchase History</a></li>
+            <li><a href="#sell-item">Sell Item</a></li> -->
+
+        </ul>
+     </nav>
+
+     <main>
+        <h1>Sell an Item on LogicLine</h1>
+        <form action="" method="">
+            <h3>Upload new item:</h3>
+            <br>
+
+            <label for="product-name">Product Name:</label>
+            <input type="text" id="product-name" required>
+
+            <label for="product-quantity">Quantity:</label>
+            <input type="number" id="product-quantity" required min="1" max="5" required>
+
+            <label for="product-price">Price:</label>
+            <input type="number" name="product-price" id="product-price" required min="10" max="50">
+
+            <label for="product-image">Upload an image:</label>
+            <input type="file" name="imageFile" accept="image/*"> 
+         
+            <input type="submit" value="Upload Item">
+            
+        </form>
+     </main>
+
+
+     <footer>
+        <p> LogicLine &copy; 2024 All Rights Reserved </p>
+        <div class="footer-icons">
+            <i class="fa-brands fa-square-facebook"></i>
+            <i class="fa-brands fa-square-instagram"></i>
+            <i class="fa-brands fa-square-x-twitter"></i>
+        </div>
+     </footer>
 </body>
 </html>
