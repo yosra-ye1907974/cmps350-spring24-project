@@ -3,32 +3,32 @@
         {
             "name": "Laptop",
             "price": "$1200",
-            "image": ""
+            "image": "../resources/img/products/labtop-img.jpeg"
         },
         {
             "name": "Smartphone",
             "price": "$800",
-            "image": ""
+            "image": "../resources/img/products/smartphone-img.jpeg"
         },
         {
             "name": "Tablet",
             "price": "$600",
-            "image": ""
+            "image": "./resources/img/products/tablet-img.jpeg"
         },
         {
             "name": "Smart Watch",
             "price": "$200",
-            "image": ""
+            "image": "../resources/img/products/smart-watch-img.jpeg"
         },
         {
             "name": "Wireless Headphones",
             "price": "$150",
-            "image": ""
+            "image": "./resources/img/products/wireless-headphone.jpeg"
         },
         {
             "name": "Bluetooth Speaker",
             "price": "$100",
-            "image": ""
+            "image": "../resources/img/products/blutooth-speaker.jpeg"
         }
     ]
 }
