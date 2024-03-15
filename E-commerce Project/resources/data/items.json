@@ -1,0 +1,34 @@
+{
+    "items": [
+        {
+            "name": "Laptop",
+            "price": "$1200",
+            "image": ""
+        },
+        {
+            "name": "Smartphone",
+            "price": "$800",
+            "image": ""
+        },
+        {
+            "name": "Tablet",
+            "price": "$600",
+            "image": ""
+        },
+        {
+            "name": "Smart Watch",
+            "price": "$200",
+            "image": ""
+        },
+        {
+            "name": "Wireless Headphones",
+            "price": "$150",
+            "image": ""
+        },
+        {
+            "name": "Bluetooth Speaker",
+            "price": "$100",
+            "image": ""
+        }
+    ]
+}
