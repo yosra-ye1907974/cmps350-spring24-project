@@ -3,17 +3,20 @@
         {
             "name": "Laptop",
             "price": "$1200",
-            "image": "../resources/img/products/labtop-img.jpeg"
+            "image": "../resources/img/products/labtop-img.jpeg",
+            "sellerId": ""
         },
         {
             "name": "Smartphone",
             "price": "$800",
-            "image": "../resources/img/products/smartphone-img.jpeg"
+            "image": "../resources/img/products/smartphone-img.jpeg",
+            "sellerId": ""
         },
         {
             "name": "Tablet",
             "price": "$600",
-            "image": "./resources/img/products/tablet-img.jpeg"
+            "image": "./resources/img/products/tablet-img.jpeg",
+            "sellerId": ""
         },
         {
             "name": "Smart Watch",
