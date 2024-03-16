@@ -3,7 +3,30 @@
     {"username":"nashwa", "password":"1234", "role":"admin"},
  
     {"firstName": "yosra", "lastName": "elshayeb","username":"yosra", "password":"1234", "balance":"100",
-    "shippingAddress": {"city": "doha", "buildingNo": "4", "streetNo": "260"}, "role": "customer"},
+    "shippingAddress": {"city": "doha", "buildingNo": "4", "streetNo": "260"}, "role": "customer", "history": [
+      {
+          "date": "1/2/2022",
+          "id": 1,
+          "price": 200,
+          "quantity":2,
+          "product": "smartphone"
+      },
+      {
+          "date": "1/2/2023",
+          "id": 2,
+          "price": 600,
+          "quantity":1,
+          "product": "laptop"
+      },
+      {
+          "date": "1/2/2021",
+          "id": 3,
+          "price": 500,
+          "quantity":3,
+          "product": "tablet"
+      }
+  ]
+  },
 
     {"username":"zahraa", "password":"1234", "companyName": "shein","bankAccount": "xyz" ,"role": "seller"}
   ]

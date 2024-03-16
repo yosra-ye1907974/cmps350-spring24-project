@@ -23,7 +23,8 @@ document.getElementById('login').addEventListener('submit', function(event) {
           window.location.href = 'main-page.html';
         else if (authenticatedUser.role == "admin") //admin responsibilities??
           window.location.href = 'main-page.html';
-
+        
+        localStorage.setItem("username", authenticatedUser.username);
       } else {
         alert('Invalid username or password');
       }
