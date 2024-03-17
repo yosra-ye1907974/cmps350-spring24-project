@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="./resources/css/common-style.css">
     <script src="https://kit.fontawesome.com/0cd70ca65d.js" crossorigin="anonymous"></script>
     <link rel="icon" type="image/x-icon" href="./resources/icons/favicon.ico">
+    <link rel="stylesheet" href="./resources/css/sell-item.css">
     <!-- use case 6 -->
     <title>Sell Item</title>
 </head>
@@ -16,6 +17,7 @@
         <ul class="nav-ul">
             <li><a href="./main-page.html">Home</a></li>
             <li><a href="./seller-dashboard.html">Seller Dashboard</a></li>
+
             <!-- <li><a href="./login-page.html">Login</a></li>
             <li><a href="#products">Our Products</a></li>
             <li><a href="./purchase-history.html">Purchase History</a></li>
@@ -26,22 +28,29 @@
 
      <main>
         <h1>Sell an Item on LogicLine</h1>
-        <form action="" method="">
-            <h3>Upload new item:</h3>
-            <br>
+        <form action="" method="" class="sell-form">
+            <section>
+                <h3>Upload new item:</h3>
+                <div>
+                    <label for="product-name">Product Name:</label>
+                    <input type="text" id="product-name" name="product-name" required>
+                </div>
+                
+                <div>
+                    <label for="product-quantity">Quantity:</label>
+                    <input type="number" id="product-quantity" name="product-quantity" required min="1">
+                </div>
+            
+                <div>
+                    <label for="product-price">Price:</label>
+                    <input type="number" name="product-price" id="product-price" required min="10" >
+                </div>
 
-            <label for="product-name">Product Name:</label>
-            <input type="text" id="product-name" required>
-
-            <label for="product-quantity">Quantity:</label>
-            <input type="number" id="product-quantity" required min="1" max="5" required>
-
-            <label for="product-price">Price:</label>
-            <input type="number" name="product-price" id="product-price" required min="10" max="50">
-
-            <label for="product-image">Upload an image:</label>
-            <input type="file" name="imageFile" accept="image/*"> 
-         
+                <div>
+                    <label for="product-image">Upload an image:</label>
+                    <input type="file" name="imageFile" accept="image/*">
+                </div>
+            </section>
             <input type="submit" value="Upload Item">
             
         </form>
