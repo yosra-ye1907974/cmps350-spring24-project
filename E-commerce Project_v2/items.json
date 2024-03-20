@@ -1,0 +1,71 @@
+{
+  "items": [
+    {
+      "productId": 1,
+      "name": "laptop",
+      "price": "1200",
+      "image": "../resources/img/products/labtop-img.jpeg",
+      "sellerId": 3
+    },
+    {
+      "productId": 2,
+      "name": "smartphone",
+      "price": "800",
+      "image": "../resources/img/products/smartphone-img.jpeg",
+      "sellerId": 3
+    },
+    {
+      "productId": 3,
+      "name": "tablet",
+      "price": "600",
+      "image": "../resources/img/products/tablet-img.jpeg",
+      "sellerId": 3
+    },
+    {
+      "productId": 4,
+      "name": "smart Watch",
+      "price": "200",
+      "image": "../resources/img/products/smart-watch-img.jpeg",
+      "sellerId": 4
+    },
+    {
+      "productId": 5,
+      "name": "wireless Headphones",
+      "price": "150",
+      "image": "../resources/img/products/wireless-headphone.jpeg",
+      "sellerId": 4
+    },
+    {
+      "productId": 20240319119,
+      "sellerId": "4",
+      "name": "helmet",
+      "quantity": "10",
+      "price": "120",
+      "image": "../resources/img/products/1710871506098-helmet.jpg"
+    },
+    {
+      "productId": 20240320307,
+      "sellerId": "4",
+      "name": "necklace",
+      "quantity": "6",
+      "price": "1000",
+      "image": "../resources/img/products/1710940425936-necklace.jpg"
+    },
+    {
+      "productId": 20240320858,
+      "sellerId": "4",
+      "name": "glasses",
+      "quantity": "44",
+      "price": "300",
+      "image": "../resources/img/products/1710960432803-glasses.jpg"
+    },
+    {
+      "productId": 20240320401,
+      "sellerId": "3",
+      "name": "xyzzz",
+      "quantity": "3",
+      "price": "300",
+      "image": "../resources/img/products/1710964247982-person.png"
+    }
+  ]
+}

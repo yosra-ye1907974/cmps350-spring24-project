@@ -1,0 +1,83 @@
+
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+/* Reset browser styling */
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-size: 16px;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Varela Round", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+}
+
+:root{
+    --background--color: #ececec;
+    --text--color: #0e1424;
+    --secondary--color:  #adbbc6;
+}
+
+
+body{
+    width: 100%;
+    margin: auto;
+    background-color: var(--background--color);
+    color: var(--text--color);
+
+
+    /* navigation bar styling => common*/
+    nav{
+        padding: 1rem;
+        background-color: var(--secondary--color);
+        ul{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            /* column-gap: 1rem; */
+
+            li {
+                    display: flex;
+                    justify-content: center;
+                    padding: 10px;
+                a{
+                    color: var(--text--color);
+                    
+                }
+            }
+           
+            a:hover{
+                color: var(--background--color);
+                font-size: 20px;
+                text-align: center;
+            }
+        }
+    }
+    
+  
+    /* footer Styling => common*/
+    footer{
+        background-color: var(--secondary--color); 
+        text-align: center;
+        
+        p{
+            padding: 0.5rem;
+        }
+    
+        .fa-brands{
+           font-size: 30px;
+           cursor: pointer;
+           margin-left: 1rem;
+        }
+
+        .fa-brands:hover{
+            color: var(--background--color);
+            font-size: 40px;
+        }
+    
+    }
+}
+

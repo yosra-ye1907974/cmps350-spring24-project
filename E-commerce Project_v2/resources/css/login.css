@@ -1,0 +1,128 @@
+/* Styling for login only */
+
+body{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 
+            "header header"
+            "main main"
+            "footer footer";
+
+    header{
+        display: flex;
+        gap: 2rem;
+        background-color: #adbbc6;
+        grid-area: header;
+        #login-icon{
+            width:40%;
+            opacity: 60%;
+        }
+    }
+
+    .heading {
+
+        .title{
+            margin: 3rem;
+            text-align: center;
+            font-size: 40px;
+        }
+        h2{
+            text-align: center;
+            color: #050b21b0;
+            font-size: 18px;
+        }
+    }
+
+    main{
+        width: inherit;
+        grid-area: main;
+
+        form{
+            padding: 3rem;
+            display: grid;
+            grid-template-columns: 4fr;
+            row-gap: 1rem;
+            justify-items: center; 
+
+            label{
+                width: 70%;
+                font-size: 20px;
+                text-align: left;
+    
+            }
+            
+            
+            input {
+                font-size: 20px;
+                border-radius: 15px;
+                border: 1px solid #8a8fa35c;
+                padding: 1rem;
+                background-color: #adbbc6;
+                width:70%;
+                place-items: center;
+                margin-bottom: 4rem;
+            }
+            
+            input[type="submit"] {
+                width: fit-content;
+                padding-left: 2rem;
+                padding-right: 2rem;
+                color: #ececec;
+                background-color: #0e1424;
+                cursor: pointer;
+            }
+
+            input[type="submit"]:hover{
+                font-size: 30px;
+                color: var(--text--color);
+                background-color: var(--background--color);
+            }
+           
+
+        }
+    }
+
+    footer{
+        grid-area: footer;
+    }
+        
+}
+
+
+/* Desktop Screen & Tablet Screen*/
+
+@media screen and (min-width: 40rem){
+    body{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 3fr  3fr;
+        grid-template-areas: 
+                "header main"
+                "header main"
+                "footer main";
+    
+        header{
+            grid-area: header;
+            flex-direction: column;
+            align-items: center;
+        }
+    
+       
+    
+        main{
+            grid-area: main;
+            place-self: center;
+        }
+    
+        footer{
+            grid-area: footer;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: end;
+
+        }
+            
+    }
+}

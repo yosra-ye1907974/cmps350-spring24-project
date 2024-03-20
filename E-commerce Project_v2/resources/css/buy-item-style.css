@@ -1,0 +1,141 @@
+html {
+    height: 100%;
+}
+body{
+    height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+main {
+    width: 100%;
+    padding: 25px;
+
+    h1 {
+        font-size: 30px;
+        font-weight: bold;
+    }
+}
+
+.buy-form {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+.card {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 15px;
+    background-color: #e0e2e5;
+
+    img {
+       padding: 0.5rem;
+       border-radius: 1rem;
+    }
+}
+.purchase {
+    margin-top: 20px;
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    column-gap: 15px;
+    background-color: #e0e2e5;
+}
+.btn {
+    padding: 5px;
+    border-radius: 0.5rem;
+}
+label {
+    font-weight: bold;
+    margin: 0px 10px;
+}
+
+input[readonly] {
+    border: none;
+    background-color: #e0e2e5;
+}
+
+input[type="number"]{
+   border-radius: 0.2rem;
+   width: 50px;
+}
+#productName{
+    font-size: 20px;
+    text-transform: capitalize;
+}
+
+.message{
+    top: 30%;
+    left:40%;
+    width: 400px;
+    height: 350px;
+    background-color: aqua;
+    z-index: 1000;
+    position: fixed;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    color:green;
+   visibility: hidden;
+}
+.message h1{
+    font-style: italic;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+}
+.message h3{
+    color:gray;
+    text-shadow: #0e1424;
+
+}
+.message .closeButton {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 7px 14px;
+
+}
+.message img{
+    width: 100px;
+    height: 100px;
+}
+.myheading{
+    display:flex;
+    justify-content:space-evenly;
+    
+}
+.balance{
+    display:flex;
+    justify-content:space-evenly;
+}
+footer {
+    padding: 0.5rem;
+}
+
+.links{
+    display: flex;
+    justify-content:space-around;
+    margin-bottom: 0.5rem;
+    a {
+        color: #0e1424;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .card {
+        flex-wrap: wrap;
+    }
+}
