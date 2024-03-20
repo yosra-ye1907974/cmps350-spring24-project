@@ -24,8 +24,8 @@
 
         <form action="" class="buy-form" id="buy-form">
             <!-- <h5>Product's Info</h5> -->
-            <div class="card">
-                <img src="./resources/img/logicLine.jpeg" alt="" width="30%">
+            <section class="card">
+                <img src="./resources/img/logicLine.jpeg" alt="">
                 <div>
                     <div>
                         <label for="name">product name</label>
@@ -35,16 +35,15 @@
                         <label for="quantity">Quantity</label>
                         <input type="number" value="1" name="quantity" id="quantity" min="1">
                     </div>   
+                    <br>
+                    <div>
+                        <label for="price">Total Price</label>
+                        <input type="number" value="100" name="price" id="price" readonly>
+                    </div>
+                    <br>
+                    <input type="submit" value="Purchase" class="btn">    
                 </div>
-            </div>
-            <!-- <h5>Check out</h5> -->
-            <div class="purchase">
-                <div>
-                    <label for="price">Total Price</label>
-                    <input type="number" value="100" name="price" id="price" readonly>
-                </div>                 
-                <input type="submit" value="Purchase" class="btn"> 
-            </div>  
+            </section> 
         </form>
      </main>
 
