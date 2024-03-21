@@ -135,7 +135,8 @@ footer {
 }
 
 @media screen and (max-width: 500px) {
-    .card {
+    .card, .purchase {
         flex-wrap: wrap;
     }
+   
 }
