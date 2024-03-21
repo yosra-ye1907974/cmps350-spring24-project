@@ -7,11 +7,14 @@ window.onload = () => {
   let customerName = document.getElementById("title");
 
   if (purchaseHistoryData) {
+    //changing h1 content
     customerName.textContent =
       purchaseHistoryData[0].username + "'s Purchasing History";
   }
   console.log(purchaseHistoryData);
   if (purchaseHistoryData) {
+
+    //for each item in the purchaseHistoryData list create 
     purchaseHistoryData.forEach((element) => {
       let row = document.createElement("tr");
       let td1 = document.createElement("td");
@@ -33,19 +36,21 @@ window.onload = () => {
       row.appendChild(td4);
       row.appendChild(td5);
 
+      //after creating the row add it to the table
       historyTable.appendChild(row);
     });
   } else {
+    
+    //if there's no items purchased yet
     const purchase = document.getElementById("purchase-history");
     const para = document.createElement("p");
     para.style.textAlign = "center";
     para.textContent = "You have not purchase any thing yet.";
     purchase.appendChild(para);
   }
-  // alert(historyTable);
 
-  ///////////////navbar
 
+  //fetching the users from user.json
   async function getUsers() {
     try {
       const response = await fetch("../users.json");
@@ -53,6 +58,7 @@ window.onload = () => {
       const { users } = jsonData;
       allUsers = users;
 
+      //getting the current logged in user
       getCurrentUser();
     } catch (error) {
       console.error("Error fetching JSON file:", error);
@@ -60,6 +66,8 @@ window.onload = () => {
   }
 
   function getCurrentUser() {
+
+    //getting the current user from localStorage
     const retrievedData = JSON.parse(localStorage.getItem("currentUser"));
     console.log(retrievedData);
     console.log(allUsers);
@@ -82,6 +90,7 @@ window.onload = () => {
         const todo = document.getElementById("todo");
         const anchorTodo = document.createElement("a");
 
+        //the green styling 
         role.style.color = "green";
         role.style.textDecoration = "none";
         role.style.fontSize = "16px";
@@ -90,7 +99,7 @@ window.onload = () => {
         role.textContent = `${user.username} ( ${user.role} )`;
         navusername.appendChild(role);
 
-        //assign role
+        //assign role - change nav based on role
         if (user.role === "customer") {
           anchorTodo.textContent = "Purchase History";
           anchorTodo.href = "/purchase-history.html";
@@ -110,7 +119,7 @@ window.onload = () => {
         logoutLink.textContent = "Logout";
         logoutLink.style.cursor = "pointer";
         loginLogout.innerHTML = ""; // Clear existing content
-        //////////////////////////////////////
+      
         loginLogout.appendChild(logoutLink);
         logoutLink.addEventListener("click", function () {
           console.log(logoutLink.textContent);
@@ -126,7 +135,6 @@ window.onload = () => {
           }
         });
 
-        ///////////////////
       }
     }
   }
