@@ -34,12 +34,12 @@ window.onload = () => {
     productName.value = selectedProduct.name;
     productPrice.value = selectedProduct.price;
 
-    //styling 
-    if (parseInt(currentUser.balance) < 200) {
-      balanceInfo.style.color = "red";
-    } else {
-      balanceInfo.style.color = "green";
-    }
+    // //styling 
+    // if (parseInt(currentUser.balance) < 200) {
+    //   balanceInfo.style.color = "red";
+    // } else {
+    //   balanceInfo.style.color = "green";
+    // }
 
     balanceInfo.innerText = currentUser.balance;
   }
@@ -65,10 +65,13 @@ window.onload = () => {
   function uniqueId() {
 
     //change this?
-    const id =
-      new Date().toISOString().slice(0, 10).replace(/-/g, "").toString() +
-      Math.floor(Math.random() * 1000);
-    return parseInt(id);
+    // const id =
+    //   new Date().toISOString().slice(0, 10).replace(/-/g, "").toString() +
+    //   Math.floor(Math.random() * 1000);
+    // return parseInt(id);
+
+    const id = Math.floor(Math.random() * 1000) + new Date().getTime();
+    return id;
   }
 
   //purchase and maintain history
@@ -171,11 +174,11 @@ function getCurrentUser() {
       const todo = document.getElementById("todo");
       const anchorTodo = document.createElement("a");
 
-      //the green styling
-      role.style.color = "green";
-      role.style.textDecoration = "none";
-      role.style.fontSize = "16px";
-      role.style.textTransform = "capitalize";
+      // //the green styling
+      // role.style.color = "green";
+      // role.style.textDecoration = "none";
+      // role.style.fontSize = "16px";
+      // role.style.textTransform = "capitalize";
       ///show user name
       role.textContent = `${user.username} ( ${user.role} )`;
       navusername.appendChild(role);

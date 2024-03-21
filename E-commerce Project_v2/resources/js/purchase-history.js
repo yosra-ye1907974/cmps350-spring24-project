@@ -40,7 +40,7 @@ window.onload = () => {
       historyTable.appendChild(row);
     });
   } else {
-    
+
     //if there's no items purchased yet
     const purchase = document.getElementById("purchase-history");
     const para = document.createElement("p");
@@ -90,11 +90,11 @@ window.onload = () => {
         const todo = document.getElementById("todo");
         const anchorTodo = document.createElement("a");
 
-        //the green styling 
-        role.style.color = "green";
-        role.style.textDecoration = "none";
-        role.style.fontSize = "16px";
-        role.style.textTransform = "capitalize";
+        // //the green styling 
+        // role.style.color = "green";
+        // role.style.textDecoration = "none";
+        // role.style.fontSize = "16px";
+        // role.style.textTransform = "capitalize";
         ///show user name
         role.textContent = `${user.username} ( ${user.role} )`;
         navusername.appendChild(role);
