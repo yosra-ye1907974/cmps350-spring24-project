@@ -3,6 +3,8 @@ window.onload = () => {
   let purchaseDetails = {};
   let totalQuantity = 1;
   let totalPrice = 0;
+
+  //get users for the nav bar to change
   getUsers();
   let data = JSON.parse(localStorage.getItem("purchaseHistory"));
 
@@ -10,6 +12,7 @@ window.onload = () => {
     purchaseHistory = data;
   }
 
+  //get current user
   let currentUser = JSON.parse(localStorage.getItem("currentUser"));
   if (currentUser.role != "customer") {
     window.location.href = "main-page.html";
@@ -30,13 +33,17 @@ window.onload = () => {
     productName.innerHTML = "";
     productName.value = selectedProduct.name;
     productPrice.value = selectedProduct.price;
+
+    //styling 
     if (parseInt(currentUser.balance) < 200) {
       balanceInfo.style.color = "red";
     } else {
       balanceInfo.style.color = "green";
     }
+
     balanceInfo.innerText = currentUser.balance;
   }
+
 
   productQuantity.addEventListener("input", (event) => {
     let val = parseInt(event.target.value);
@@ -49,20 +56,22 @@ window.onload = () => {
       totalPrice =
         parseInt(selectedProduct.price) * parseInt(productQuantity.value);
     } else {
+      //no quantity 
       purchaseButton.disabled = true;
-      // totalPrice = 0;
-      // totalQuantity = 1;
     }
   });
-  ////////////////generate unique id
+
+  //generate unique id for the purchase
   function uniqueId() {
+
+    //change this?
     const id =
       new Date().toISOString().slice(0, 10).replace(/-/g, "").toString() +
       Math.floor(Math.random() * 1000);
     return parseInt(id);
   }
-  /////////////////purchase and maintain history
 
+  //purchase and maintain history
   purchaseButton.addEventListener("click", () => {
     event.preventDefault();
     totalPrice =
@@ -89,21 +98,23 @@ window.onload = () => {
     event.preventDefault();
 
     currentUser.balance = parseInt(currentUser.balance) - parseInt(totalPrice);
+
     //update currentuser in local storage
     localStorage.setItem("currentUser", JSON.stringify(currentUser));
     editBalance(currentUser, totalPrice);
     window.location.href = "main-page.html";
   });
 };
-///////////////edit current balance in json
 
+//edit current balance in json
 function editBalance(seluser, balance) {
   const data = {
     username: seluser.username,
     password: seluser.password,
     balance,
   };
-  //make call for edit balance in json file
+
+  //make call for edit balance in json file - should we change this??
   fetch("http://localhost:3000/currentBalance", {
     method: "PUT",
     headers: {
@@ -122,7 +133,9 @@ function editBalance(seluser, balance) {
       console.error("Request failed:", error);
     });
 }
-////////////////////////////////////navbar
+
+
+//fetch users from json file
 async function getUsers() {
   try {
     const response = await fetch("../users.json");
@@ -130,6 +143,7 @@ async function getUsers() {
     const { users } = jsonData;
     allUsers = users;
 
+    //get current user
     getCurrentUser();
   } catch (error) {
     console.error("Error fetching JSON file:", error);
@@ -157,6 +171,7 @@ function getCurrentUser() {
       const todo = document.getElementById("todo");
       const anchorTodo = document.createElement("a");
 
+      //the green styling
       role.style.color = "green";
       role.style.textDecoration = "none";
       role.style.fontSize = "16px";
@@ -165,7 +180,7 @@ function getCurrentUser() {
       role.textContent = `${user.username} ( ${user.role} )`;
       navusername.appendChild(role);
 
-      //assign role
+      //assign role - change nav based on role
       if (user.role === "customer") {
         anchorTodo.textContent = "Purchase History";
         anchorTodo.href = "/purchase-history.html";
@@ -179,11 +194,12 @@ function getCurrentUser() {
         anchorTodo.href = "/dashboard.html";
         todo.appendChild(anchorTodo);
       }
+
       // logoutLink.href = "#logout"; // Add logout action
       logoutLink.textContent = "Logout";
       logoutLink.style.cursor = "pointer";
       loginLogout.innerHTML = ""; // Clear existing content
-      //////////////////////////////////////
+      
       loginLogout.appendChild(logoutLink);
       logoutLink.addEventListener("click", function () {
         console.log(logoutLink.textContent);
@@ -198,8 +214,6 @@ function getCurrentUser() {
           window.location.href = "main-page.html";
         }
       });
-
-      ///////////////////
     }
   }
 }
