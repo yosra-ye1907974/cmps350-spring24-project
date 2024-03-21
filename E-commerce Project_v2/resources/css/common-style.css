@@ -37,7 +37,6 @@ body{
             display: flex;
             align-items: center;
             justify-content: space-between;
-            /* column-gap: 1rem; */
 
             li {
                     display: flex;
@@ -45,13 +44,14 @@ body{
                     padding: 10px;
                 a{
                     color: var(--text--color);
+                    font-size: 20px;
                     
                 }
             }
            
             a:hover{
                 color: var(--background--color);
-                font-size: 20px;
+                font-size: 25px;
                 text-align: center;
             }
         }
