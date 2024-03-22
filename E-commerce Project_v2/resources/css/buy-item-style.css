@@ -48,8 +48,20 @@ main {
     background-color: #e0e2e5;
 }
 .btn {
-    padding: 5px;
-    border-radius: 0.5rem;
+    border-radius: 1rem;
+    width: fit-content;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    align-self: center;
+    color: #ececec;
+    background-color: #0e1424;
+    cursor: pointer;
+    font-size: 20px;
+}
+.btn:hover{
+    font-size: 30px;
+    color: var(--text--color);
+    background-color: var(--background--color);
 }
 label {
     font-weight: bold;
