@@ -59,5 +59,16 @@ main h1 {
         
     };
 }
+.links{
+    display: flex;
+    justify-content:space-around;
+    margin-bottom: 0.5rem;
+    a {
+        color: #0e1424;
+    }
+    a:hover{
+        color: white;
+    }
+}
 
 

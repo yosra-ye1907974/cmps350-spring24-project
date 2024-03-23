@@ -145,6 +145,9 @@ footer {
     a {
         color: #0e1424;
     }
+    a:hover{
+        color: white;
+    }
 }
 
 @media screen and (max-width: 700px) {
