@@ -160,7 +160,7 @@ document.getElementById('home-link').addEventListener('click', function(event) {
   document.getElementById('home').classList.add('active');
   document.getElementById('mission').classList.remove('active');
   document.getElementById('vision').classList.remove('active');
-  document.getElementById('products').classList.remove('active');
+ 
 
 });
 
@@ -169,7 +169,7 @@ document.getElementById('mission-link').addEventListener('click', function(event
   document.getElementById('mission').classList.add('active');
   document.getElementById('home').classList.remove('active');
   document.getElementById('vision').classList.remove('active');
-  document.getElementById('products').classList.remove('active');
+  
 
 });
 
@@ -179,6 +179,7 @@ document.getElementById('vision-link').addEventListener('click', function(event)
   document.getElementById('vision').classList.add('active');
   document.getElementById('home').classList.remove('active');
   document.getElementById('mission').classList.remove('active');
-  document.getElementById('products').classList.remove('active');
+  
 
 });
+
