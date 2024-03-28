@@ -10,7 +10,7 @@ body{
 main {
     width: 100%;
     padding: 25px;
-
+    
     h1 {
         font-size: 30px;
         font-weight: bold;
@@ -29,12 +29,11 @@ main {
     justify-content: center;
     align-items: center;
     column-gap: 15px;
-    background-color: #e0e2e5;
 
     img {
        padding: 0.5rem;
        border-radius: 1rem;
-       width: 30%;
+       width: 35%;
     }
 }
 .purchase {
@@ -45,7 +44,6 @@ main {
     justify-content: space-around;
     align-items: center;
     column-gap: 15px;
-    background-color: #e0e2e5;
 }
 .btn {
     border-radius: 1rem;
@@ -56,7 +54,8 @@ main {
     color: #ececec;
     background-color: #0e1424;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 25px;
+    margin: 10px;
 }
 .btn:hover{
     font-size: 30px;
@@ -66,19 +65,22 @@ main {
 label {
     font-weight: bold;
     margin: 0px 10px;
+    font-size: 25px;
 }
 
 input[readonly] {
     border: none;
-    background-color: #e0e2e5;
+    background-color: var(--background--color);
+    font-size: 25px;
 }
 
 input[type="number"]{
    border-radius: 0.2rem;
    width: 50px;
+   font-size: 30px;
 }
 #productName{
-    font-size: 20px;
+    font-size: 30px;
     text-transform: capitalize;
 }
 
@@ -127,12 +129,19 @@ input[type="number"]{
 }
 .myheading{
     display:flex;
-    justify-content: space-evenly;
-    
+    justify-content: space-between;
+}
+.myheading>h1 {
+    align-self: center;
 }
 .balance{
     display:flex;
     justify-content:space-evenly;
+    background-color:#0e1424;
+    color: #ececec;
+    padding: 8px;
+    border-radius: 30px;
+    margin: 10px;
 }
 footer {
     padding: 0.5rem;
@@ -150,9 +159,10 @@ footer {
     }
 }
 
-@media screen and (max-width: 700px) {
-    .card, .purchase, .myheading {
-        flex-wrap: wrap;
+@media screen and (max-width: 900px) {
+    
+    .myheading, .card, .purchase   {
+        flex-direction: column;
     }
    
 }
