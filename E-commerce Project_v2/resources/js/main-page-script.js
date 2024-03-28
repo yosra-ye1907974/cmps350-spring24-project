@@ -153,3 +153,41 @@ function getCurrentUser() {
     }
   }
 }
+
+
+document.getElementById('home-link').addEventListener('click', function(event) {
+  event.preventDefault()
+  document.getElementById('home').classList.add('active');
+  document.getElementById('mission').classList.remove('active');
+  document.getElementById('vision').classList.remove('active');
+  document.getElementById('products').classList.remove('active');
+
+});
+
+document.getElementById('mission-link').addEventListener('click', function(event) {
+  event.preventDefault()
+  document.getElementById('mission').classList.add('active');
+  document.getElementById('home').classList.remove('active');
+  document.getElementById('vision').classList.remove('active');
+  document.getElementById('products').classList.remove('active');
+
+});
+
+
+document.getElementById('vision-link').addEventListener('click', function(event) {
+  event.preventDefault()
+  document.getElementById('vision').classList.add('active');
+  document.getElementById('home').classList.remove('active');
+  document.getElementById('mission').classList.remove('active');
+  document.getElementById('products').classList.remove('active');
+
+});
+
+document.getElementById('products-link').addEventListener('click', function(event) {
+  event.preventDefault()
+  document.getElementById('products').classList.add('active');
+  document.getElementById('home').classList.remove('active');
+  document.getElementById('mission').classList.remove('active');
+  document.getElementById('vision').classList.remove('active');
+
+});

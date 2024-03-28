@@ -3,15 +3,24 @@ body{
     
     display: grid;
     grid-template-columns: auto;
-   
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 
+            "header header"
+            "main main"
+            "footer footer";
 
     header{
+        grid-area: header;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
         background-color: var(--secondary--color);
         padding: 4rem;
+        nav ul li a{
+            font-size: 25px;
+        }
         img{
             padding: 2rem;
             width:300px;
@@ -25,9 +34,16 @@ body{
         }
     }
 
+    main{
+        grid-area: main;
+    }
+
+    footer{
+        grid-area: footer;
+        height: 15rem;
+    }
     .main-section{
         padding: 2rem;
-        
         h2{
             font-size: 30px;
             letter-spacing: 2px;
@@ -37,7 +53,7 @@ body{
             line-height: 2rem;
             font-weight: 400;
             margin-top: 1rem;
-            font-size: 20px;
+            font-size: 23px;
         }
 
         button{
@@ -93,13 +109,16 @@ body{
     aside{
         background-color: var(--secondary--color);
         padding: 1rem;
+       
         ul{
             display: flex;
             justify-content: center;
             column-gap: 1rem;
             li{
+                
                 a{
                    color:var(--text--color);
+                   font-size: 25px;
                 }
                 a:hover{
                     color: var(--background--color);
@@ -162,13 +181,15 @@ figure :hover{
     grid-gap: 1rem;
 }
 
+.content {
+    display: none;
+}
+.active {
+    display: block;
+}
+
 
 @media screen and (min-width: 800px){
   
-    .grid{
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-        grid-row: auto auto;
-        grid-gap: 1rem;
-    }
+   
 }
