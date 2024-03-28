@@ -2,6 +2,9 @@
 /* Font */
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 
+html{
+    height: 100%;
+}
 /* Reset browser styling */
 *{
     margin: 0px;
@@ -27,7 +30,7 @@ body{
     margin: auto;
     background-color: var(--background--color);
     color: var(--text--color);
-
+    height: 100%;
 
     /* navigation bar styling => common*/
     nav{
