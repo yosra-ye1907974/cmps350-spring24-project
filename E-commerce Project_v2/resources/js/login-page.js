@@ -15,7 +15,9 @@ async function getUsers() {
   }
 }
 
-document.getElementById("login").addEventListener("submit", function (event) {
+document.getElementById("login").addEventListener("submit", login);
+
+function login() {
   event.preventDefault();
 
   const username = document.getElementById("username").value;
@@ -30,12 +32,8 @@ document.getElementById("login").addEventListener("submit", function (event) {
 
     //save it in memory
     localStorage.setItem("currentUser", JSON.stringify(currentUser));
-    if (currentUser.role == "seller") {
-      window.location.href = "sell-item.html";
-    } else {
-      window.location.href = "main-page.html";
-    }
+    window.location.href = "main-page.html";
   } else {
     alert("Invalid username or password");
   }
-});
+}

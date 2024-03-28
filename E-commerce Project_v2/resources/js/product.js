@@ -104,7 +104,7 @@ window.onload = () => {
           todo.appendChild(anchorTodo);
         } else if (user.role === "seller") {
           anchorTodo1.textContent = "Sales";
-          anchorTodo1.href = "/sell-item.html";
+          anchorTodo1.href = "/sale-record.html";
           todo1.appendChild(anchorTodo1);
 
           anchorTodo2.textContent = "Products";
@@ -114,7 +114,7 @@ window.onload = () => {
           todo2.appendChild(anchorTodo2);
 
           anchorTodo.textContent = "New Items";
-          anchorTodo.href = "/newitems.html";
+          anchorTodo.href = "/sell-item.html";
           todo.appendChild(anchorTodo);
         } else if (user.role === "admin") {
           anchorTodo.textContent = "Dashboard";

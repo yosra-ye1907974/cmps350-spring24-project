@@ -1,55 +1,9 @@
 let allUsers = [];
 let User = {};
 window.onload = () => {
+  window.loadTable = loadTable
   getUsers();
-  let historyTable = document.getElementById("history-table");
-  let purchaseHistoryData = JSON.parse(localStorage.getItem("purchaseHistory"));
-  let customerName = document.getElementById("title");
-
-  if (purchaseHistoryData) {
-    //changing h1 content
-    customerName.textContent =
-      purchaseHistoryData[0].username + "'s Purchasing History";
-  }
-  console.log(purchaseHistoryData);
-  if (purchaseHistoryData) {
-
-    //for each item in the purchaseHistoryData list create 
-    purchaseHistoryData.forEach((element) => {
-      let row = document.createElement("tr");
-      let td1 = document.createElement("td");
-      let td2 = document.createElement("td");
-      let td3 = document.createElement("td");
-      let td4 = document.createElement("td");
-      let td5 = document.createElement("td");
-      let td6 = document.createElement("td");
-      td1.textContent = element.orderId;
-      td2.textContent = element.name;
-      td6.textContent = element.price;
-      td3.textContent = element.totalQuantity;
-      td4.textContent = element.totalPrice;
-      td5.textContent = element.orderDate;
-      row.appendChild(td1);
-      row.appendChild(td2);
-      row.appendChild(td6);
-      row.appendChild(td3);
-      row.appendChild(td4);
-      row.appendChild(td5);
-
-      //after creating the row add it to the table
-      historyTable.appendChild(row);
-    });
-  } else {
-
-    //if there's no items purchased yet
-    const purchase = document.getElementById("purchase-history");
-    const para = document.createElement("p");
-    para.style.textAlign = "center";
-    para.textContent = "You have not purchase any thing yet.";
-    purchase.appendChild(para);
-  }
-
-
+  loadTable()
   //fetching the users from user.json
   async function getUsers() {
     try {
@@ -108,7 +62,7 @@ window.onload = () => {
           todo.appendChild(anchorTodo);
         } else if (user.role === "seller") {
           anchorTodo.textContent = "Sale Record";
-          anchorTodo.href = "/sell-item.html";
+          anchorTodo.href = "/sale-record.html";
           todo.appendChild(anchorTodo);
         } else if (user.role === "admin") {
           anchorTodo.textContent = "Dashboard";
@@ -139,3 +93,54 @@ window.onload = () => {
     }
   }
 };
+
+function loadTable() {
+  let historyTable = document.getElementById("history-table");
+  let purchaseHistoryData = JSON.parse(localStorage.getItem("purchaseHistory"));
+  let customerName = document.getElementById("title");
+
+  if (purchaseHistoryData) {
+    //changing h1 content
+    customerName.textContent =
+      purchaseHistoryData[0].username + "'s Purchasing History";
+  }
+  console.log(purchaseHistoryData);
+  if (purchaseHistoryData) {
+
+    //for each item in the purchaseHistoryData list create 
+    purchaseHistoryData.forEach((element) => {
+      let row = document.createElement("tr");
+      let td1 = document.createElement("td");
+      let td2 = document.createElement("td");
+      let td3 = document.createElement("td");
+      let td4 = document.createElement("td");
+      let td5 = document.createElement("td");
+      let td6 = document.createElement("td");
+      td1.textContent = element.orderId;
+      td2.textContent = element.name;
+      td6.textContent = element.price;
+      td3.textContent = element.totalQuantity;
+      td4.textContent = element.totalPrice;
+      td5.textContent = element.orderDate;
+      row.appendChild(td1);
+      row.appendChild(td2);
+      row.appendChild(td6);
+      row.appendChild(td3);
+      row.appendChild(td4);
+      row.appendChild(td5);
+
+      //after creating the row add it to the table
+      historyTable.appendChild(row);
+    });
+  } else {
+
+    //if there's no items purchased yet
+    const purchase = document.getElementById("purchase-history");
+    const para = document.createElement("p");
+    para.style.textAlign = "center";
+    para.textContent = "You have not purchase any thing yet.";
+    purchase.appendChild(para);
+  }
+
+
+}

@@ -1,52 +1,12 @@
 let allUsers = [];
 let User = {};
 window.onload = () => {
+  window.uploadProduct = uploadProduct
   getUsers();
+  //upload new product
+  uploadProduct()
 
-  function saleRecord() {
-    let historyTable = document.getElementById("history-table");
-    let purchaseHistoryData = JSON.parse(
-      localStorage.getItem("purchaseHistory")
-    );
-
-    purchaseHistoryData = purchaseHistoryData.filter((item) => {
-      return item.sellerId == User.Id;
-    });
-    let customerName = document.getElementById("title");
-
-    //   if (purchaseHistoryData) {
-    //     customerName.textContent =
-    //       purchaseHistoryData[0].username + "'s Purchasing History";
-    //   }
-    console.log(purchaseHistoryData);
-    purchaseHistoryData.forEach((element) => {
-      let row = document.createElement("tr");
-      let td1 = document.createElement("td");
-      let td2 = document.createElement("td");
-      let td3 = document.createElement("td");
-      let td4 = document.createElement("td");
-      let td5 = document.createElement("td");
-      let td6 = document.createElement("td");
-      td1.textContent = element.orderId;
-      td2.textContent = element.name;
-      td6.textContent = element.price;
-      td3.textContent = element.totalQuantity;
-      td4.textContent = element.totalPrice;
-      td5.textContent = element.orderDate;
-      row.appendChild(td1);
-      row.appendChild(td2);
-      row.appendChild(td6);
-      row.appendChild(td3);
-      row.appendChild(td4);
-      row.appendChild(td5);
-
-      historyTable.appendChild(row);
-    });
-  }
-  // alert(historyTable);
-
-  ///////////////navbar
-
+  //navbar
   async function getUsers() {
     try {
       const response = await fetch("../users.json");
@@ -56,15 +16,13 @@ window.onload = () => {
 
       getCurrentUser();
     } catch (error) {
-      console.error("Error fetching JSON file:", error);
+      console.error(error);
     }
   }
 
   function getCurrentUser() {
     const retrievedData = JSON.parse(localStorage.getItem("currentUser"));
 
-    console.log(retrievedData);
-    console.log(allUsers);
     if (retrievedData) {
       let user = allUsers.find((u) => {
         return (
@@ -73,10 +31,11 @@ window.onload = () => {
         );
       });
 
-      console.log(user);
       if (user) {
         User = user;
-        saleRecord();
+        const sellerId = document.getElementById("sellerId");
+        sellerId.value = User.Id;
+
         const loginLogout = document.getElementById("loginLogout");
         const logoutLink = document.createElement("a");
         const navusername = document.getElementById("username");
@@ -103,9 +62,7 @@ window.onload = () => {
           todo.appendChild(anchorTodo);
         } else if (user.role === "seller") {
           anchorTodo1.textContent = "Sales";
-          anchorTodo1.href = "/sell-item.html";
-          anchorTodo1.style.color = "white";
-          anchorTodo1.style.textShadow = "2px 2px 4px rgba(0, 0, 0, 0.5)";
+          anchorTodo1.href = "/sale-record.html";
           todo1.appendChild(anchorTodo1);
 
           anchorTodo2.textContent = "Products";
@@ -113,7 +70,9 @@ window.onload = () => {
           todo2.appendChild(anchorTodo2);
 
           anchorTodo.textContent = "New Items";
-          anchorTodo.href = "/newitems.html";
+          anchorTodo.href = "/sell-item.html";
+          anchorTodo.style.color = "white";
+          anchorTodo.style.textShadow = "2px 2px 4px rgba(0, 0, 0, 0.5)";
           todo.appendChild(anchorTodo);
         } else if (user.role === "admin") {
           anchorTodo.textContent = "Dashboard";
@@ -127,7 +86,6 @@ window.onload = () => {
         //////////////////////////////////////
         loginLogout.appendChild(logoutLink);
         logoutLink.addEventListener("click", function () {
-          console.log(logoutLink.textContent);
           if (logoutLink.textContent === "Logout") {
             localStorage.removeItem("currentUser");
             localStorage.removeItem("selectedProduct");
@@ -139,9 +97,29 @@ window.onload = () => {
             window.location.href = "main-page.html";
           }
         });
-
-        ///////////////////
       }
     }
   }
 };
+
+function uploadProduct() {
+  document
+    .getElementById("uploadForm")
+    .addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      let formData = new FormData(this);
+      fetch("http://localhost:3000/submit", {
+        method: "POST",
+        body: formData,
+      })
+        .then((response) => {
+          if (response.ok) {
+            window.location.href = "products.html";
+          }
+        })
+        .catch((error) => {
+          alert("Error submitting form:", error);
+        });
+    });
+}

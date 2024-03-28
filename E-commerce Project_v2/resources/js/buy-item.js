@@ -44,8 +44,9 @@ window.onload = () => {
     balanceInfo.innerText = currentUser.balance;
   }
 
-
-  productQuantity.addEventListener("input", (event) => {
+  //handling change quantity
+  productQuantity.addEventListener("input", changeQuantity);
+  function changeQuantity() {
     let val = parseInt(event.target.value);
     if (val > 0) {
       productPrice.value =
@@ -59,23 +60,17 @@ window.onload = () => {
       //no quantity 
       purchaseButton.disabled = true;
     }
-  });
+  }
 
   //generate unique id for the purchase
   function uniqueId() {
-
-    //change this?
-    // const id =
-    //   new Date().toISOString().slice(0, 10).replace(/-/g, "").toString() +
-    //   Math.floor(Math.random() * 1000);
-    // return parseInt(id);
-
     const id = Math.floor(Math.random() * 1000) + new Date().getTime();
     return id;
   }
 
   //purchase and maintain history
-  purchaseButton.addEventListener("click", () => {
+  purchaseButton.addEventListener("click", purchase);
+  function purchase() {
     event.preventDefault();
     totalPrice =
       parseInt(selectedProduct.price) * parseInt(productQuantity.value);
@@ -96,8 +91,10 @@ window.onload = () => {
     localStorage.setItem("purchaseHistory", JSON.stringify(purchaseHistory));
 
     message.style.visibility = "visible";
-  });
-  closeButton.addEventListener("click", () => {
+  }
+
+  closeButton.addEventListener("click", handleCloseBtn);
+  function handleCloseBtn() {
     event.preventDefault();
 
     currentUser.balance = parseInt(currentUser.balance) - parseInt(totalPrice);
@@ -106,7 +103,7 @@ window.onload = () => {
     localStorage.setItem("currentUser", JSON.stringify(currentUser));
     editBalance(currentUser, totalPrice);
     window.location.href = "main-page.html";
-  });
+  }
 };
 
 //edit current balance in json
@@ -117,7 +114,7 @@ function editBalance(seluser, balance) {
     balance,
   };
 
-  //make call for edit balance in json file - should we change this??
+  //make call for edit balance in json file 
   fetch("http://localhost:3000/currentBalance", {
     method: "PUT",
     headers: {
@@ -190,7 +187,7 @@ function getCurrentUser() {
         todo.appendChild(anchorTodo);
       } else if (user.role === "seller") {
         anchorTodo.textContent = "Sale Record";
-        anchorTodo.href = "/sell-item.html";
+        anchorTodo.href = "/sale-record.html";
         todo.appendChild(anchorTodo);
       } else if (user.role === "admin") {
         anchorTodo.textContent = "Dashboard";

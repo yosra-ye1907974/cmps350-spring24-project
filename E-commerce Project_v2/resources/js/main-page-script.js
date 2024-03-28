@@ -74,7 +74,7 @@ function displayOnThePage(products) {
   });
 }
 
-////////////////////////////////nav bar related
+//navigation bar 
 
 async function getUsers() {
   try {
@@ -108,10 +108,11 @@ function getCurrentUser() {
       const todo = document.getElementById("todo");
       const anchorTodo = document.createElement("a");
 
-      role.style.color = "green";
-      role.style.textDecoration = "none";
-      role.style.fontSize = "16px";
-      role.style.textTransform = "capitalize";
+      // role.style.color = "green";
+      // role.style.textDecoration = "none";
+      // role.style.fontSize = "16px";
+      // role.style.textTransform = "capitalize";
+
       ///show user name
       role.textContent = `${user.username} ( ${user.role} )`;
       navusername.appendChild(role);
@@ -123,19 +124,20 @@ function getCurrentUser() {
         todo.appendChild(anchorTodo);
       } else if (user.role === "seller") {
         anchorTodo.textContent = "Sale Record";
-        anchorTodo.href = "/sell-item.html";
+        anchorTodo.href = "/sale-record.html";
         todo.appendChild(anchorTodo);
       } else if (user.role === "admin") {
         anchorTodo.textContent = "Dashboard";
-        anchorTodo.href = "/dashboard.html";
+        //anchorTodo.href = "/dashboard.html";
         todo.appendChild(anchorTodo);
       }
+
       // logoutLink.href = "#logout"; // Add logout action
       logoutLink.textContent = "Logout";
       logoutLink.style.cursor = "pointer";
       loginLogout.innerHTML = ""; // Clear existing content
-      //////////////////////////////////////
       loginLogout.appendChild(logoutLink);
+
       logoutLink.addEventListener("click", function () {
         if (logoutLink.textContent === "Logout") {
           localStorage.removeItem("currentUser");
@@ -148,19 +150,16 @@ function getCurrentUser() {
           window.location.href = "main-page.html";
         }
       });
-
-      ///////////////////
     }
   }
 }
 
-
+//hide home/mission/vision sections and display them when they are clicked
 document.getElementById('home-link').addEventListener('click', function(event) {
   event.preventDefault()
   document.getElementById('home').classList.add('active');
   document.getElementById('mission').classList.remove('active');
   document.getElementById('vision').classList.remove('active');
- 
 
 });
 
