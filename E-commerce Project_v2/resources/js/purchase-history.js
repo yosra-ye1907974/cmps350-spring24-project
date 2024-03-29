@@ -37,18 +37,13 @@ window.onload = () => {
       if (user) {
         User = user;
 
-        const loginLogout = document.getElementById("loginLogout");
+        const loginLogout = document.querySelector("#loginLogout");
         const logoutLink = document.createElement("a");
-        const navusername = document.getElementById("username");
+        const navusername = document.querySelector("#username");
         const role = document.createElement("a");
-        const todo = document.getElementById("todo");
+        const todo = document.querySelector("#todo");
         const anchorTodo = document.createElement("a");
 
-        // //the green styling 
-        // role.style.color = "green";
-        // role.style.textDecoration = "none";
-        // role.style.fontSize = "16px";
-        // role.style.textTransform = "capitalize";
         ///show user name
         role.textContent = `${user.username} ( ${user.role} )`;
         navusername.appendChild(role);
@@ -95,9 +90,9 @@ window.onload = () => {
 };
 
 function loadTable() {
-  let historyTable = document.getElementById("history-table");
+  let historyTable = document.querySelector("#history-table");
   let purchaseHistoryData = JSON.parse(localStorage.getItem("purchaseHistory"));
-  let customerName = document.getElementById("title");
+  let customerName = document.querySelector("#title");
 
   if (purchaseHistoryData) {
     //changing h1 content
@@ -135,7 +130,7 @@ function loadTable() {
   } else {
 
     //if there's no items purchased yet
-    const purchase = document.getElementById("purchase-history");
+    const purchase = document.querySelector("#purchase-history");
     const para = document.createElement("p");
     para.style.textAlign = "center";
     para.textContent = "You have not purchase any thing yet.";

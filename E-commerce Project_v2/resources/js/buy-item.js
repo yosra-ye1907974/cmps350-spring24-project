@@ -19,14 +19,14 @@ window.onload = () => {
   }
 
   let selectedProduct = JSON.parse(localStorage.getItem("selectedProduct"));
-  let productImage = document.getElementById("productImage");
-  let productName = document.getElementById("productName");
-  let productQuantity = document.getElementById("productQuantity");
-  let productPrice = document.getElementById("price");
-  let purchaseButton = document.getElementById("purchaseButton");
-  let message = document.getElementById("message");
-  let closeButton = document.getElementById("closeButton");
-  let balanceInfo = document.getElementById("balanceInfo");
+  let productImage = document.querySelector("#productImage");
+  let productName = document.querySelector("#productName");
+  let productQuantity = document.querySelector("#productQuantity");
+  let productPrice = document.querySelector("#price");
+  let purchaseButton = document.querySelector("#purchaseButton");
+  let message = document.querySelector("#message");
+  let closeButton = document.querySelector("#closeButton");
+  let balanceInfo = document.querySelector("#balanceInfo");
 
   if (selectedProduct) {
     productImage.src = selectedProduct.image;
@@ -164,18 +164,13 @@ function getCurrentUser() {
     if (user) {
       User = user;
 
-      const loginLogout = document.getElementById("loginLogout");
+      const loginLogout = document.querySelector("#loginLogout");
       const logoutLink = document.createElement("a");
-      const navusername = document.getElementById("username");
+      const navusername = document.querySelector("#username");
       const role = document.createElement("a");
-      const todo = document.getElementById("todo");
+      const todo = document.querySelector("#todo");
       const anchorTodo = document.createElement("a");
 
-      // //the green styling
-      // role.style.color = "green";
-      // role.style.textDecoration = "none";
-      // role.style.fontSize = "16px";
-      // role.style.textTransform = "capitalize";
       ///show user name
       role.textContent = `${user.username} ( ${user.role} )`;
       navusername.appendChild(role);
