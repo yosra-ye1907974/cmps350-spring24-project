@@ -75,7 +75,7 @@ body{
             padding: 1rem;
             
         }
-        nav .nav-ul{
+        header nav .nav-ul{
             display: flex;
             align-items: center;
             flex-direction: column;
@@ -187,3 +187,4 @@ figure :hover{
 .active {
     display: block;
 }
+

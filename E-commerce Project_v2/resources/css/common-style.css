@@ -39,6 +39,7 @@ body{
         ul{
             display: flex;
             align-items: center;
+            flex-direction: column;
             justify-content: space-between;
 
             li {
@@ -84,11 +85,9 @@ body{
     
     }
 }
-
-@media screen and (max-width: 700px){
-    nav {
-        ul{
-            flex-direction: column;
-        }
+@media only screen and (min-width: 800px) {
+   
+    nav .nav-ul{
+        flex-direction: row;
     }
 }
