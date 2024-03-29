@@ -34,7 +34,14 @@
       "price": "150",
       "image": "../resources/img/products/wireless-headphone.jpeg",
       "sellerId": 4
+    },
+    {
+      "productId": 2024032986,
+      "sellerId": "3",
+      "name": "Monitor ",
+      "quantity": "3",
+      "price": "1000",
+      "image": "../resources/img/products/1711742520031-OIP.jpg"
     }
- 
   ]
 }
