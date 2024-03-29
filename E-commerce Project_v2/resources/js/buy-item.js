@@ -33,14 +33,7 @@ window.onload = () => {
     productName.innerHTML = "";
     productName.value = selectedProduct.name;
     productPrice.value = selectedProduct.price;
-
-    // //styling 
-    // if (parseInt(currentUser.balance) < 200) {
-    //   balanceInfo.style.color = "red";
-    // } else {
-    //   balanceInfo.style.color = "green";
-    // }
-
+    
     balanceInfo.innerText = currentUser.balance;
   }
 

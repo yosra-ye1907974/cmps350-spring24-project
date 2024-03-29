@@ -64,7 +64,7 @@ window.onload = () => {
           anchorTodo.href = "/dashboard.html";
           todo.appendChild(anchorTodo);
         }
-        // logoutLink.href = "#logout"; // Add logout action
+        //logout 
         logoutLink.textContent = "Logout";
         logoutLink.style.cursor = "pointer";
         loginLogout.innerHTML = ""; // Clear existing content
@@ -136,6 +136,4 @@ function loadTable() {
     para.textContent = "You have not purchase any thing yet.";
     purchase.appendChild(para);
   }
-
-
 }

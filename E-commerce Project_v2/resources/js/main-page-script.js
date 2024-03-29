@@ -1,13 +1,12 @@
 let list = [];
 let allUsers = [];
 let User = {};
-const textInput = document.getElementById("search");
-const button = document.getElementById("searchButton");
+const textInput = document.querySelector("#search");
+const button = document.querySelector("#searchButton");
 
 window.onload = function () {
   try {
     getUsers();
-
     getItems();
     displayOnThePage(list);
   } catch (error) {
@@ -101,17 +100,12 @@ function getCurrentUser() {
     if (user) {
       User = user;
 
-      const loginLogout = document.getElementById("loginLogout");
+      const loginLogout = document.querySelector("#loginLogout");
       const logoutLink = document.createElement("a");
-      const navusername = document.getElementById("username");
+      const navusername = document.querySelector("#username");
       const role = document.createElement("a");
-      const todo = document.getElementById("todo");
+      const todo = document.querySelector("#todo");
       const anchorTodo = document.createElement("a");
-
-      // role.style.color = "green";
-      // role.style.textDecoration = "none";
-      // role.style.fontSize = "16px";
-      // role.style.textTransform = "capitalize";
 
       ///show user name
       role.textContent = `${user.username} ( ${user.role} )`;
@@ -155,29 +149,29 @@ function getCurrentUser() {
 }
 
 //hide home/mission/vision sections and display them when they are clicked
-document.getElementById('home-link').addEventListener('click', function(event) {
+document.querySelector('#home-link').addEventListener('click', function(event) {
   event.preventDefault()
-  document.getElementById('home').classList.add('active');
-  document.getElementById('mission').classList.remove('active');
-  document.getElementById('vision').classList.remove('active');
+  document.querySelector('#home').classList.add('active');
+  document.querySelector('#mission').classList.remove('active');
+  document.querySelector('#vision').classList.remove('active');
 
 });
 
-document.getElementById('mission-link').addEventListener('click', function(event) {
+document.querySelector('#mission-link').addEventListener('click', function(event) {
   event.preventDefault()
-  document.getElementById('mission').classList.add('active');
-  document.getElementById('home').classList.remove('active');
-  document.getElementById('vision').classList.remove('active');
+  document.querySelector('#mission').classList.add('active');
+  document.querySelector('#home').classList.remove('active');
+  document.querySelector('#vision').classList.remove('active');
   
 
 });
 
 
-document.getElementById('vision-link').addEventListener('click', function(event) {
+document.querySelector('#vision-link').addEventListener('click', function(event) {
   event.preventDefault()
-  document.getElementById('vision').classList.add('active');
-  document.getElementById('home').classList.remove('active');
-  document.getElementById('mission').classList.remove('active');
+  document.querySelector('#vision').classList.add('active');
+  document.querySelector('#home').classList.remove('active');
+  document.querySelector('#mission').classList.remove('active');
   
 
 });
