@@ -34,6 +34,14 @@
       "price": "150",
       "image": "../resources/img/products/wireless-headphone.jpeg",
       "sellerId": 4
+    },
+    {
+      "productId": 20240329528,
+      "sellerId": "3",
+      "name": "Elick robot",
+      "quantity": "2",
+      "price": "350",
+      "image": "../resources/img/products/1711740769027-elick.jpeg"
     }
  
   ]

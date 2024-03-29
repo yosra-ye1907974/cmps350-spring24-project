@@ -61,7 +61,7 @@ function displayOnThePage(products) {
         localStorage.setItem("selectedProduct", JSON.stringify(product));
         window.location.href = "buy-item.html";
       } else if (User && User.role === "seller") {
-        alert("you are not permitted to purchas");
+        alert("you are not permitted to purchase items");
       } else {
         alert("Please login first.");
         window.location.href = "login-page.html";

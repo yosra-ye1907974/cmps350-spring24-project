@@ -62,7 +62,7 @@ app.post("/submit", upload.single("imageFile"), (req, res) => {
 
     fs.writeFile("../items.json", JSON.stringify(jsonData, null, 2), (err) => {
       if (err) throw err;
-      console.log("Data saved to data.json");
+      console.log("Data saved to items.json");
     });
   });
 
