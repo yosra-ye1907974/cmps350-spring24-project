@@ -4,11 +4,11 @@ window.onload = () => {
   getUsers();
 
   function productRecord(list) {
-    let historyTable = document.getElementById("history-table");
+    let historyTable = document.querySelector("#history-table");
     purchaseHistoryData = list.filter((item) => {
       return item.sellerId == User.Id;
     });
-    let customerName = document.getElementById("title");
+    let customerName = document.querySelector("#title");
     purchaseHistoryData.forEach((element) => {
       let row = document.createElement("tr");
       let td1 = document.createElement("td");
@@ -35,7 +35,6 @@ window.onload = () => {
     });
   }
 
-  ///////////////navbar
   //for reading items to display
   async function getItems() {
     try {
@@ -52,6 +51,7 @@ window.onload = () => {
     }
   }
 
+  //for navigation bar change
   async function getUsers() {
     try {
       const response = await fetch("../users.json");
@@ -78,21 +78,17 @@ window.onload = () => {
       if (user) {
         User = user;
         getItems();
-        const loginLogout = document.getElementById("loginLogout");
+        const loginLogout = document.querySelector("#loginLogout");
         const logoutLink = document.createElement("a");
-        const navusername = document.getElementById("username");
+        const navusername = document.querySelector("#username");
         const role = document.createElement("a");
         const anchorTodo = document.createElement("a");
         const anchorTodo1 = document.createElement("a");
         const anchorTodo2 = document.createElement("a");
-        const todo1 = document.getElementById("todo1");
-        const todo2 = document.getElementById("todo2");
-        const todo = document.getElementById("todo");
+        const todo1 = document.querySelector("#todo1");
+        const todo2 = document.querySelector("#todo2");
+        const todo = document.querySelector("#todo");
 
-        role.style.color = "green";
-        role.style.textDecoration = "none";
-        role.style.fontSize = "16px";
-        role.style.textTransform = "capitalize";
         ///show user name
         role.textContent = `${user.username} ( ${user.role} )`;
         navusername.appendChild(role);
@@ -121,11 +117,11 @@ window.onload = () => {
           anchorTodo.href = "/dashboard.html";
           todo.appendChild(anchorTodo);
         }
-        // logoutLink.href = "#logout"; // Add logout action
+        //logout
         logoutLink.textContent = "Logout";
         logoutLink.style.cursor = "pointer";
         loginLogout.innerHTML = ""; // Clear existing content
-        //////////////////////////////////////
+        
         loginLogout.appendChild(logoutLink);
         logoutLink.addEventListener("click", function () {
           if (logoutLink.textContent === "Logout") {
@@ -139,8 +135,6 @@ window.onload = () => {
             window.location.href = "main-page.html";
           }
         });
-
-        ///////////////////
       }
     }
   }

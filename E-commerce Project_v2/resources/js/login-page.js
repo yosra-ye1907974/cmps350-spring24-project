@@ -15,13 +15,13 @@ async function getUsers() {
   }
 }
 
-document.getElementById("login").addEventListener("submit", login);
+document.querySelector("#login").addEventListener("submit", login);
 
 function login() {
   event.preventDefault();
 
-  const username = document.getElementById("username").value;
-  const password = document.getElementById("password").value;
+  const username = document.querySelector("#username").value;
+  const password = document.querySelector("#password").value;
 
   let authenticatedUser = allUsers.find((u) => {
     return u.username === username && u.password === password;
