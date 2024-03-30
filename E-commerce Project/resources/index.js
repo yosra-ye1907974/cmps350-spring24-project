@@ -41,7 +41,7 @@ app.post("/submit", upload.single("imageFile"), (req, res) => {
     price: formData["product-price"],
     image: image ? "../resources/img/products/" + image.filename : null,
   };
-  ////////////////
+
   //jsonData.items.push(newItem);
 
   // Write the updated JSON data back to the file
@@ -69,7 +69,7 @@ app.post("/submit", upload.single("imageFile"), (req, res) => {
   res.send("Item uploaded successfully");
 });
 
-////////////////////////////////edit the current balance/////////////////////////////////////////////
+//edit the current balance
 app.use(express.json());
 app.put("/currentBalance", (req, res) => {
   const { username, password, balance } = req.body;
@@ -103,7 +103,7 @@ app.put("/currentBalance", (req, res) => {
   });
 });
 
-/////////////////////////////////end edit current balance
+//end edit current balance
 
 // Start the server
 app.listen(PORT, () => {
