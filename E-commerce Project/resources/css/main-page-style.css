@@ -1,32 +1,51 @@
 /* Styling of the main-page.html */
-
 body{
+    
     display: grid;
     grid-template-columns: auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 
+            "header header"
+            "main main"
+            "footer footer";
 
     header{
+        grid-area: header;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
         background-color: var(--secondary--color);
-        padding: 0.5rem;
+        padding: 4rem;
+        nav ul li a{
+            font-size: 25px;
+        }
         img{
             padding: 2rem;
-            width:30%;
+            width:300px;
+            opacity: 60%;
         }
         .title{
             letter-spacing: 0.2rem; 
             font-size: 50px;  
             margin-bottom: 15px;
+           
         }
     }
 
+    main{
+        grid-area: main;
+    }
+
+    footer{
+        grid-area: footer;
+        height: 15rem;
+    }
     .main-section{
         padding: 2rem;
-       
         h2{
-            font-size: 25px;
+            font-size: 30px;
             letter-spacing: 2px;
         }
         p{
@@ -34,6 +53,7 @@ body{
             line-height: 2rem;
             font-weight: 400;
             margin-top: 1rem;
+            font-size: 23px;
         }
 
         button{
@@ -43,13 +63,32 @@ body{
             background-color: var(--text--color);
             color: var(--secondary--color);
             border-radius: 20px;
+            width: 210px;
         }
     
         button:hover{
-            font-size: 20px;
+            background:rgb(37, 29, 29);
+            width: 220px;
+            cursor: pointer;
         }
-
-        form{
+        nav{
+            padding: 1rem;
+            
+        }
+        header nav .nav-ul{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: space-between;
+            column-gap: 1rem;
+        }
+        
+        .nav-ul li a{
+            color: #0e1424;
+            font-size: 13px;
+        }
+        
+        .form{
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -61,20 +100,25 @@ body{
                 background-color: var(--background--color);
                 color: var(--text--color);
                 border-radius: 20px;
+                width: 350px;
             };
         }
+        
     }
-
+    
     aside{
         background-color: var(--secondary--color);
         padding: 1rem;
+       
         ul{
             display: flex;
             justify-content: center;
             column-gap: 1rem;
             li{
+                
                 a{
                    color:var(--text--color);
+                   font-size: 25px;
                 }
                 a:hover{
                     color: var(--background--color);
@@ -88,41 +132,59 @@ body{
 
     
     .item{
+     
+        background: coral;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: space-evenly;
+        flex-wrap: wrap;
+        justify-content: space-between;
         padding: 1rem;
         margin-bottom: 2rem;
         border: 1px solid  var(--secondary--color);
         border-radius: 5px;
         background-color: var(--secondary--color);
-    
+        min-width: 300px;
+        height: 280px;
+        margin-left: 10px;
+        margin-right: 10px;
+   
     figure{
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: space-between;
+       color:black;
+        width: 220px;
+        height:140px;
+        border-radius: 5px;
+       
+        
         img{
-            width: 70%;
+            width: 220px;
+            height:140px;
             margin-bottom: 1rem;
             border-radius: 5px;
+            transition: transform 0.3s;
+           
         }
     }
-
-   
 
     }
 
 }
-
+figure :hover{
+    transform: scale(1.1);
+}
 .products-container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 1rem;
 }
 
-/* Styling for different screen sizes */
-@media screen and (min-width: 60rem) {
-
+.content {
+    display: none;
 }
+.active {
+    display: block;
+}
+

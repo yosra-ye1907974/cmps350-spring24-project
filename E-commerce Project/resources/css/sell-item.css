@@ -1,5 +1,4 @@
-/* Sell item custom styling  */
-html{
+html {
     height: 100%;
 }
 body{
@@ -7,57 +6,43 @@ body{
     display: grid;
     grid-template-rows: auto 1fr auto;
 }
-main h1 {
+
+.title {
     font-size: 30px;
-    font-weight: 800;
-    text-align: center;
+    padding: 1.5rem 0.5rem 0rem;
+    letter-spacing: 0.2rem;
 }
 
-.sell-form{
-    display: flex;
-    column-gap: 1rem;
-    align-items: center;
-    flex-wrap: wrap;
-    flex-direction: column;
-    padding: 10px;
-   
-    input{
-        padding: 5px;
-        border-radius: 15px;
-        border: 1px solid var( --secondary--color);
-    }
-    input[type="submit"] {
-        width: fit-content;
-        padding-left: 2rem;
-        padding-right: 2rem;
-        align-self: center;
-        color: #ececec;
+
+.history-table {
+    margin: 1.5rem 0.8rem 1rem;
+    width: 90%;
+    thead {
         background-color: #0e1424;
-        cursor: pointer;
-        font-size: 20px;
-    }
-    label, h3{
-        font-size: 20px;
-        text-align: center;
-    }
-   
-    input[type="submit"]:hover{
-        font-size: 30px;
-        color: var(--text--color);
-        background-color: var(--background--color);
+        color: #ececec;
     }
 
-    section{
-        div{
-            margin: 30px;
-            display: flex;
-            width: inherit;
-            justify-content: space-between;
-    
-        }
+    th, td{
+        padding: 0.5rem;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
 
-        
-    };
 }
 
+footer {
+    padding: 0.5rem;
+}
+
+.links{
+    display: flex;
+    justify-content:space-around;
+    margin-bottom: 0.5rem;
+    a {
+        color: #0e1424;
+    }
+    a:hover{
+        color: white;
+    }
+}
 

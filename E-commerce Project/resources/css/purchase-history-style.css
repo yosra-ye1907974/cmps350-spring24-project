@@ -13,21 +13,6 @@ body{
     letter-spacing: 0.2rem;
 }
 
-nav{
-    padding: 1rem;
-    
-}
-nav .nav-ul{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    column-gap: 1rem;
-}
-
-.nav-ul li a{
-    color: #0e1424;
-    font-size: 13px;
-}
 
 .history-table {
     margin: 1.5rem 0.8rem 1rem;
@@ -55,6 +40,9 @@ footer {
     margin-bottom: 0.5rem;
     a {
         color: #0e1424;
+    }
+    a:hover{
+        color: white;
     }
 }
 

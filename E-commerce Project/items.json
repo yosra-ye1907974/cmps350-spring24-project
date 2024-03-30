@@ -1,37 +1,47 @@
 {
-    "items": [
-        {
-            "name": "Laptop",
-            "price": "$1200",
-            "image": "../resources/img/products/labtop-img.jpeg",
-            "sellerId": ""
-        },
-        {
-            "name": "Smartphone",
-            "price": "$800",
-            "image": "../resources/img/products/smartphone-img.jpeg",
-            "sellerId": ""
-        },
-        {
-            "name": "Tablet",
-            "price": "$600",
-            "image": "./resources/img/products/tablet-img.jpeg",
-            "sellerId": ""
-        },
-        {
-            "name": "Smart Watch",
-            "price": "$200",
-            "image": "../resources/img/products/smart-watch-img.jpeg"
-        },
-        {
-            "name": "Wireless Headphones",
-            "price": "$150",
-            "image": "./resources/img/products/wireless-headphone.jpeg"
-        },
-        {
-            "name": "Bluetooth Speaker",
-            "price": "$100",
-            "image": "../resources/img/products/blutooth-speaker.jpeg"
-        }
-    ]
+  "items": [
+    {
+      "productId": 1,
+      "name": "laptop",
+      "price": "1200",
+      "image": "../resources/img/products/labtop-img.jpeg",
+      "sellerId": 3
+    },
+    {
+      "productId": 2,
+      "name": "smartphone",
+      "price": "800",
+      "image": "../resources/img/products/smartphone-img.jpeg",
+      "sellerId": 3
+    },
+    {
+      "productId": 3,
+      "name": "tablet",
+      "price": "600",
+      "image": "../resources/img/products/tablet-img.jpeg",
+      "sellerId": 3
+    },
+    {
+      "productId": 4,
+      "name": "smart Watch",
+      "price": "200",
+      "image": "../resources/img/products/smart-watch-img.jpeg",
+      "sellerId": 4
+    },
+    {
+      "productId": 5,
+      "name": "wireless Headphones",
+      "price": "150",
+      "image": "../resources/img/products/wireless-headphone.jpeg",
+      "sellerId": 4
+    },
+    {
+      "productId": 20240329528,
+      "sellerId": "3",
+      "name": "Elick robot",
+      "quantity": "2",
+      "price": "350",
+      "image": "../resources/img/products/1711740769027-elick.jpeg"
+    }
+  ]
 }

@@ -92,7 +92,7 @@ body{
 
 /* Desktop Screen & Tablet Screen*/
 
-@media screen and (min-width: 40rem){
+@media screen and (min-width: 800px){
     body{
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -104,12 +104,9 @@ body{
     
         header{
             grid-area: header;
-            flex-direction: column;
             align-items: center;
         }
-    
-       
-    
+
         main{
             grid-area: main;
             place-self: center;
