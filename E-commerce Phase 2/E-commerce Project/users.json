@@ -1,0 +1,40 @@
+{
+  "users": [
+    {
+      "username": "nashwa",
+      "password": "1234",
+      "role": "admin",
+      "Id": 1
+    },
+    {
+      "Id": 2,
+      "firstName": "Yosra",
+      "lastName": "elshayeb",
+      "username": "yosra",
+      "password": "1234",
+      "balance": 4300,
+      "shippingAddress": {
+        "city": "doha",
+        "buildingNo": "4",
+        "streetNo": "260"
+      },
+      "role": "customer"
+    },
+    {
+      "Id": 3,
+      "username": "zahraa",
+      "password": "1234",
+      "companyName": "shein",
+      "bankAccount": "xyz",
+      "role": "seller"
+    },
+    {
+      "Id": 4,
+      "username": "fatima",
+      "password": "1234",
+      "companyName": "Irshad",
+      "bankAccount": "xyz",
+      "role": "seller"
+    }
+  ]
+}
