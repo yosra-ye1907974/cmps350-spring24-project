@@ -1,0 +1,168 @@
+html {
+    height: 100%;
+}
+body{
+    height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+main {
+    width: 100%;
+    padding: 25px;
+    
+    h1 {
+        font-size: 30px;
+        font-weight: bold;
+    }
+}
+
+.buy-form {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+.card {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 15px;
+
+    img {
+       padding: 0.5rem;
+       border-radius: 1rem;
+       width: 35%;
+    }
+}
+.purchase {
+    margin-top: 20px;
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    column-gap: 15px;
+}
+.btn {
+    border-radius: 1rem;
+    width: fit-content;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    align-self: center;
+    color: #ececec;
+    background-color: #0e1424;
+    cursor: pointer;
+    font-size: 25px;
+    margin: 10px;
+}
+.btn:hover{
+    font-size: 30px;
+    color: var(--text--color);
+    background-color: var(--background--color);
+}
+label {
+    font-weight: bold;
+    margin: 0px 10px;
+    font-size: 25px;
+}
+
+input[readonly] {
+    border: none;
+    background-color: var(--background--color);
+    font-size: 25px;
+}
+
+input[type="number"]{
+   border-radius: 0.2rem;
+   width: 50px;
+   font-size: 30px;
+}
+#productName{
+    font-size: 30px;
+    text-transform: capitalize;
+}
+
+.message{
+    top: 30%;
+    left:40%;
+    width: 400px;
+    height: 350px;
+    background-color: aqua;
+    z-index: 1000;
+    position: fixed;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    color:green;
+   visibility: hidden;
+}
+.message h1{
+    font-style: italic;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+}
+.message h3{
+    color:gray;
+    text-shadow: #0e1424;
+
+}
+.message .closeButton {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 7px 14px;
+
+}
+.message img{
+    width: 100px;
+    height: 100px;
+}
+.myheading{
+    display:flex;
+    justify-content: space-between;
+}
+.myheading>h1 {
+    align-self: center;
+}
+.balance{
+    display:flex;
+    justify-content:space-evenly;
+    background-color:#0e1424;
+    color: #ececec;
+    padding: 8px;
+    border-radius: 30px;
+    margin: 10px;
+}
+footer {
+    padding: 0.5rem;
+}
+
+.links{
+    display: flex;
+    justify-content:space-around;
+    margin-bottom: 0.5rem;
+    a {
+        color: #0e1424;
+    }
+    a:hover{
+        color: white;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    
+    .myheading, .card, .purchase   {
+        flex-direction: column;
+    }
+   
+}

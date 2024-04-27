@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Purchase an Item</title>
+    <script
+    src="https://kit.fontawesome.com/0cd70ca65d.js"
+    crossorigin="anonymous"
+  ></script>
+    <link rel="icon" type="image/x-icon" href="./resources/icons/favicon.ico" />
+    <link rel="stylesheet" href="./resources/css/common-style.css" />
+    <link rel="stylesheet" href="./resources/css/buy-item-style.css" />
+  </head>
+  <body>
+    <nav>
+      <ul class="nav-ul">
+        <li><a id="inpage" href="./main-page.html">Home</a></li>
+        <li id="todo"></li>
+        <li id="username"></li>
+        <li id="loginLogout"><a href="./login-page.html">Login</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <div class="myheading">
+        <h1>Continue Your Purchase</h1>
+        <div class="balance">
+          <h1 id="">Current Balance:</h1>
+          <h1 id="balanceInfo">0</h1>
+        </div>
+      </div>
+
+      <form action="" class="buy-form">
+        
+        <div class="card">
+          <img
+            id="productImage"
+            src="./resources/img/logicLine.jpeg"
+            alt=""
+            
+          />
+          <div>
+            <div>
+              <label for="name">Product Name</label>
+              <input
+                type="text"
+                name="name"
+                id="productName"
+                placeholder="placeholder"
+                readonly
+              />
+            </div>
+            <div>
+              <label for="quantity">Quantity</label>
+              <input
+                type="number"
+                value="1"
+                name="quantity"
+                id="productQuantity"
+                min="1"
+              />
+            </div>
+          </div>
+        </div>
+        
+        <div class="purchase">
+          <div>
+            <label for="price">Total Price</label>
+            <input type="text" value="100" name="price" id="price" readonly />
+          </div>
+          <input
+            type="submit"
+            id="purchaseButton"
+            value="Purchase"
+            class="btn"
+          />
+        </div>
+        <div id="message" class="message">
+          <h1>Thank you!</h1>
+          <!-- <img src="./resources/img/thumbup.jpg" /> -->
+          <h3>Your Order is successfully placed</h3>
+          <button id="closeButton" class="closeButton">Close</button>
+        </div>
+      </form>
+    </main>
+
+  
+    <footer>
+      <!-- aside? -->
+      <ul class="links">
+        <li><a href="">Help</a></li>
+        <li><a href="">Contact Us</a></li>
+        <li><a href="">Terms & Conditions</a></li>
+      </ul>
+
+      <p>LogicLine &copy; 2024 All Rights Reserved</p>
+      <p>Follow us on Social Media</p>
+      <i class="fa-brands fa-square-facebook"></i>
+      <i class="fa-brands fa-square-instagram"></i>
+      <i class="fa-brands fa-square-x-twitter"></i>
+    </footer>
+
+    <script src="./resources/js/buy-item.js"></script>
+  </body>
+</html>
