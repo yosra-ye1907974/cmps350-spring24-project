@@ -1,0 +1,102 @@
+[
+    {
+        "customerId": 2,
+        "sellerId": 4,
+        "productId": 4,
+        "quantity": 1,
+        "totalPrice": 1199.0,
+        "date": "2024-04-28",
+        "shippingAddress": {
+            "city": "doha",
+            "buildingNo": "4",
+            "streetNo": "260"
+        }
+    },
+    {
+        "customerId": 5,
+        "sellerId": 3,
+        "productId": 3,
+        "quantity": 4,
+        "totalPrice": 5196.0,
+        "date": "2024-01-18",
+        "shippingAddress": {
+            "city": "Miami",
+            "buildingNo": "1213",
+            "streetNo": "Ocean Drive"
+        }
+    },
+    {
+        "customerId": 14,
+        "sellerId": 9,
+        "productId": 9,
+        "quantity": 2,
+        "totalPrice": 1798.0,
+        "date": "2024-03-01",
+        "shippingAddress": ""
+    },
+    {
+        "customerId": 13,
+        "sellerId": 7,
+        "productId": 17,
+        "quantity": 4,
+        "totalPrice": 5996.0,
+        "date": "2024-03-24",
+        "shippingAddress": {
+            "city": "Chicago",
+            "buildingNo": "789",
+            "streetNo": "State Street"
+        }
+    },
+    {
+        "customerId": 12,
+        "sellerId": 9,
+        "productId": 19,
+        "quantity": 2,
+        "totalPrice": 2998.0,
+        "date": "2024-01-21",
+        "shippingAddress": {
+            "city": "Los Angeles",
+            "buildingNo": "456",
+            "streetNo": "Broadway"
+        }
+    },
+    {
+        "customerId": 12,
+        "sellerId": 6,
+        "productId": 21,
+        "quantity": 4,
+        "totalPrice": 3996.0,
+        "date": "2024-02-16",
+        "shippingAddress": {
+            "city": "Los Angeles",
+            "buildingNo": "456",
+            "streetNo": "Broadway"
+        }
+    },
+    {
+        "customerId": 14,
+        "sellerId": 9,
+        "productId": 29,
+        "quantity": 1,
+        "totalPrice": 99.0,
+        "date": "2024-01-27",
+        "shippingAddress": {
+            "city": "San Francisco",
+            "buildingNo": "1011",
+            "streetNo": "Market Street"
+        }
+    },
+    {
+        "customerId": 2,
+        "sellerId": 8,
+        "productId": 13,
+        "quantity": 4,
+        "totalPrice": 3996.0,
+        "date": "2024-04-10",
+        "shippingAddress": {
+            "city": "doha",
+            "buildingNo": "4",
+            "streetNo": "260"
+        }
+    }
+]     
