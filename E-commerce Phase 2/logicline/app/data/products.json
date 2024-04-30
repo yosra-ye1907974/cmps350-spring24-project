@@ -1,46 +1,353 @@
-[{ 
-            "productId": 1, 
-             "name":"LG Tv 42 inch",
-             "price":"21,999",
-             "real_price":"25,999",
-             "img":"http://www.lg.com/us/images/tvs/md05802269/gallery/medium01.jpg"
-          }, { 
-            "productId": 2, 
-             "name":"Samsung Tv 40 inch",
-             "price":"20,999",
-             "real_price":"24,999",
-             "img":"http://www.220-electronics.com/media/catalog/product/s/o/sony-kdl55hx750multi-system-tv-angle_1.png"
-          },
-     {  
-            "productId": 3,
-             "name":"Panasonic Tv",
-             "price":"19,999",
-             "real_price":"22,999",
-             "img":"https://images-na.ssl-images-amazon.com/images/I/61Ekm1BJYbL._SX355_.jpg"
-          },{  
-            "productId": 4,
-             "name":"Sony Tv 50 inch" ,
-             "price":"28,999",
-             "real_price":"35,999",
-             "img":"http://www.220-electronics.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/s/o/sony-kdl55hx750multi-system-tv_1.png"
-          },
-    {  
-            "productId": 5,
-            "name":"Sharp Tv",
-             "price":"29,999",
-             "real_price":"34,999",
-             "img":"http://blackfridaytvs.com/wp-content/uploads/2014/11/Sharp-AQUOS-60-LED-1080p-Smart-HDTV-Black-LC-60LE644U-Best-Buy-SKU-8890013.png"
-          }, {  
-            "productId": 6,
-             "name":"Toshiba Tv",
-             "price":"32,999",
-             "real_price":"36,999",
-             "img":"http://www.1a20.com/wp-content/uploads/2012/11/4758734_S1E2.png"
-          }, { 
-            "productId": 7, 
-             "name":"Vizio Tv",
-             "price":"51,999",
-             "real_price":"79,999",
-             "img":"http://blackfridaytvs.com/wp-content/uploads/2014/11/VIZIO-50-Class-LED-1080p-240Hz-Smart-HDTV-M502I-B1-Best-Buy-SKU-7501014-300x257.png"
-          }
-    ]
+[
+   {
+     "productId": 1,
+     "name": "LG TV 42 inch",
+     "price": "21,999",
+     "sellerId": 3,
+     "img": "http://www.lg.com/us/images/tvs/md05802269/gallery/medium01.jpg"
+   },
+   {
+     "productId": 2,
+     "name": "Sony PlayStation 5",
+     "price": "499",
+     "sellerId": 3,
+     "img": "https://www.sony.com/electronics/playstation"
+   },
+   {
+     "productId": 3,
+     "name": "Apple MacBook Pro 13-inch",
+     "price": "1,299",
+     "sellerId": 3,
+     "img": "https://www.apple.com/macbook-pro-13/"
+   },
+   {
+     "productId": 4,
+     "name": "Samsung Galaxy S21 Ultra",
+     "price": "1,199",
+     "sellerId": 3,
+     "img": "https://www.samsung.com/us/smartphones/galaxy-s21-ultra-5g/"
+   },
+   {
+     "productId": 5,
+     "name": "DJI Mavic Air 2 Drone",
+     "price": "799",
+     "sellerId": 4,
+     "img": "https://www.dji.com/mavic-air-2"
+   },
+   {
+     "productId": 6,
+     "name": "Bose QuietComfort 35 II Headphones",
+     "price": "299",
+     "sellerId": 4,
+     "img": "https://www.bose.com/en_us/products/headphones/noise_cancelling_headphones/quietcomfort-35-wireless-ii.html"
+   },
+   {
+     "productId": 7,
+     "name": "Microsoft Xbox Series X",
+     "price": "499",
+     "sellerId": 4,
+     "img": "https://www.xbox.com/en-US/consoles/xbox-series-x"
+   },
+   {
+     "productId": 8,
+     "name": "HP Spectre x360 Laptop",
+     "price": "1,199",
+     "sellerId": 4,
+     "img": "https://www8.hp.com/us/en/laptops/spectre-x360-13t-touch-laptop/overview.html"
+   },
+   {
+     "productId": 9,
+     "name": "Google Pixel 6 Pro",
+     "price": "899",
+     "sellerId": 9,
+     "img": "https://store.google.com/us/product/pixel_6"
+   },
+   {
+     "productId": 10,
+     "name": "GoPro HERO10 Black",
+     "price": "499",
+     "sellerId": 4,
+     "img": "https://gopro.com/en/us/shop/cameras/hero10-black/CHDHX-101-master.html"
+   },
+   {
+     "productId": 11,
+     "name": "LG OLED C1 55-inch TV",
+     "price": "1,699",
+     "sellerId": 6,
+     "img": "https://www.lg.com/us/tvs/lg-oled55c1pub-oled-4k-tv"
+   },
+   {
+     "productId": 12,
+     "name": "Nintendo Switch",
+     "price": "299",
+     "sellerId": 7,
+     "img": "https://www.nintendo.com/switch/"
+   },
+   {
+     "productId": 13,
+     "name": "Dell XPS 13 Laptop",
+     "price": "999",
+     "sellerId": 8,
+     "img": "https://www.dell.com/en-us/shop/dell-laptops/xps-13-laptop/spd/xps-13-9300-laptop"
+   },
+   {
+     "productId": 14,
+     "name": "OnePlus 9 Pro",
+     "price": "969",
+     "sellerId": 9,
+     "img": "https://www.oneplus.com/products/9-pro"
+   },
+   {
+     "productId": 15,
+     "name": "Sony Alpha a7 III Mirrorless Camera",
+     "price": "1,999",
+     "sellerId": 10,
+     "img": "https://www.sony.com/electronics/interchangeable-lens-cameras/ilce-7m3-body-kit"
+   },
+   {
+     "productId": 16,
+     "name": "Samsung QLED Q80A 65-inch TV",
+     "price": "1,799",
+     "sellerId": 6,
+     "img": "https://www.samsung.com/us/televisions-home-theater/tvs/qled-4k-tvs/65-class-q80a-qled-4k-uhd-hdr-smart-tv-2021-qn65q80aafxza/"
+   },
+   {
+     "productId": 17,
+     "name": "Razer Blade 15 Gaming Laptop",
+     "price": "1,499",
+     "sellerId": 7,
+     "img": "https://www.razer.com/gaming-laptops/razer-blade"
+   },
+   {
+     "productId": 18,
+     "name": "Apple iPhone 13 Pro",
+     "price": "999",
+     "sellerId": 8,
+     "img": "https://www.apple.com/iphone-13-pro/"
+   },
+   {
+     "productId": 19,
+     "name": "LG Gram 17 Laptop",
+     "price": "1,499",
+     "sellerId": 9,
+     "img": "https://www.lg.com/us/laptops/lg-17Z90P-K.AAB8U1-ultra-slim-laptop"
+   },
+   {
+     "productId": 20,
+     "name": "DJI Phantom 4 Pro V2.0 Drone",
+     "price": "1,799",
+     "sellerId": 10,
+     "img": "https://www.dji.com/phantom-4-pro-v2"
+   },
+   {
+     "productId": 21,
+     "name": "Vizio 5.1.4 Dolby Atmos Soundbar",
+     "price": "999",
+     "sellerId": 6,
+     "img": "https://www.vizio.com/en/sound-bars/sb514-4k-dolby-atmos-sound-bar"
+   },
+   {
+     "productId": 22,
+     "name": "Nintendo Switch OLED Model",
+     "price": "349",
+     "sellerId": 7,
+     "img": "https://www.nintendo.com/switch/oled-model/"
+   },
+   {
+     "productId": 23,
+     "name": "Microsoft Surface Laptop 4",
+     "price": "999",
+     "sellerId": 8,
+     "img": "https://www.microsoft.com/en-us/d/surface-laptop-4/8xbw9g3z99nh?activetab=pivot:overviewtab"
+   },
+   {
+     "productId": 24,
+     "name": "Samsung Galaxy Tab S7+",
+     "price": "849",
+     "sellerId": 9,
+     "img": "https://www.samsung.com/us/mobile/tablets/galaxy-tab-s7/"
+   },
+   {
+     "productId": 25,
+     "name": "Sony WH-1000XM4 Wireless Headphones",
+     "price": "349",
+     "sellerId": 10,
+     "img": "https://www.sony.com/electronics/headband-headphones/wh-1000xm4"
+   },
+   {
+     "productId": 26,
+     "name": "LG OLED G1 65-inch TV",
+     "price": "2,999",
+     "sellerId": 6,
+     "img": "https://www.lg.com/us/tvs/lg-oled65g1pub-oled-4k-tv"
+   },
+   {
+     "productId": 27,
+     "name": "Alienware Aurora R12 Gaming Desktop",
+     "price": "1,499",
+     "sellerId": 7,
+     "img": "https://www.dell.com/en-us/gaming/alienware-desktops/alienware-aurora-r12-gaming-desktop/spd/alienware-aurora-r12-desktop"
+   },
+   {
+     "productId": 28,
+     "name": "iPad Air (4th generation)",
+     "price": "599",
+     "sellerId": 8,
+     "img": "https://www.apple.com/ipad-air/"
+   },
+   {
+     "productId": 29,
+     "name": "Google Nest Hub (2nd generation)",
+     "price": "99",
+     "sellerId": 9,
+     "img": "https://store.google.com/us/product/nest_hub_2nd_gen"
+   },
+   {
+     "productId": 30,
+     "name": "DJI Ronin-SC Gimbal Stabilizer",
+     "price": "279",
+     "sellerId": 10,
+     "img": "https://www.dji.com/ronin-sc"
+   },
+   {
+     "productId": 31,
+     "name": "Bose SoundLink Revolve+ Bluetooth Speaker",
+     "price": "299",
+     "sellerId": 6,
+     "img": "https://www.bose.com/en_us/products/speakers/portable_speakers/soundlink-revolve-plus.html#v=soundlink_revolve_plus_black"
+   },
+   {
+     "productId": 32,
+     "name": "Oculus Quest 2 VR Headset",
+     "price": "299",
+     "sellerId": 7,
+     "img": "https://www.oculus.com/quest-2/"
+   },
+   {
+     "productId": 33,
+     "name": "Microsoft Surface Pro 7",
+     "price": "899",
+     "sellerId": 8,
+     "img": "https://www.microsoft.com/en-us/p/surface-pro-7/8n17j0m5zzqs?activetab=pivot:overviewtab"
+   },
+   {
+     "productId": 34,
+     "name": "Samsung Galaxy Watch 4",
+     "price": "249",
+     "sellerId": 9,
+     "img": "https://www.samsung.com/us/watches/galaxy-watch/galaxy-watch4-40mm-bluetooth-black-sm-r860nzkaatt/"
+   },
+   {
+     "productId": 35,
+     "name": "Sony ZV-1 Compact Camera",
+     "price": "799",
+     "sellerId": 10,
+     "img": "https://www.sony.com/electronics/cyber-shot-compact-cameras/zv-1"
+   },
+   {
+     "productId": 36,
+     "name": "Samsung 49-inch Odyssey G9 Gaming Monitor",
+     "price": "1,699",
+     "sellerId": 6,
+     "img": "https://www.samsung.com/us/computing/monitors/gaming/49--odyssey-g9-gaming-monitor-lc49g95tssnxza/"
+   },
+   {
+     "productId": 37,
+     "name": "Apple Watch Series 7",
+     "price": "399",
+     "sellerId": 7,
+     "img": "https://www.apple.com/apple-watch-series-7/"
+   },
+   {
+     "productId": 38,
+     "name": "Dell Alienware AW3420DW Curved Monitor",
+     "price": "1,199",
+     "sellerId": 8,
+     "img": "https://www.dell.com/en-us/shop/alienware-34-curved-gaming-monitor-aw3420dw/apd/210-atwf/monitors-monitor-accessories"
+   },
+   {
+     "productId": 39,
+     "name": "Google Pixel Buds A-Series",
+     "price": "99",
+     "sellerId": 9,
+     "img": "https://store.google.com/us/product/pixel_buds_a_series"
+   },
+   {
+     "productId": 40,
+     "name": "DJI FPV Combo Drone",
+     "price": "1,299",
+     "sellerId": 10,
+     "img": "https://www.dji.com/fpv"
+   },
+   {
+     "productId": 41,
+     "name": "JBL Charge 5 Portable Waterproof Speaker",
+     "price": "179",
+     "sellerId": 6,
+     "img": "https://www.jbl.com/portable-speakers/JBLCHARGE5.html"
+   },
+   {
+     "productId": 42,
+     "name": "Amazon Echo Show 10 (3rd Gen)",
+     "price": "249",
+     "sellerId": 7,
+     "img": "https://www.amazon.com/Amazon-Echo-Show-10-3rd/dp/B08N5X8C85"
+   },
+   {
+     "productId": 43,
+     "name": "Microsoft Surface Duo 2",
+     "price": "1,499",
+     "sellerId": 8,
+     "img": "https://www.microsoft.com/en-us/surface/devices/surface-duo-2"
+   },
+   {
+     "productId": 44,
+     "name": "Samsung Odyssey Neo G8 32-inch Gaming Monitor",
+     "price": "799",
+     "sellerId": 9,
+     "img": "https://www.samsung.com/us/computing/monitors/gaming/32-odyssey-neo-g8-gaming-monitor-ls32ag850qnxza/"
+   },
+   {
+     "productId": 45,
+     "name": "Sony WF-1000XM4 Wireless Earbuds",
+     "price": "279",
+     "sellerId": 10,
+     "img": "https://www.sony.com/electronics/truly-wireless/wf-1000xm4"
+   },
+   {
+     "productId": 46,
+     "name": "LG UltraFine 5K Display",
+     "price": "1,299",
+     "sellerId": 6,
+     "img": "https://www.lg.com/us/monitors/lg-27md5kl-b-ultrafine-5k-display"
+   },
+   {
+     "productId": 47,
+     "name": "Apple iPad Pro (5th generation)",
+     "price": "1,099",
+     "sellerId": 7,
+     "img": "https://www.apple.com/ipad-pro/"
+   },
+   {
+     "productId": 48,
+     "name": "Dell Alienware AW2521H Gaming Monitor",
+     "price": "599",
+     "sellerId": 8,
+     "img": "https://www.dell.com/en-us/shop/alienware-25-gaming-monitor-aw2521h/apd/210-avwa/monitors-monitor-accessories"
+   },
+   {
+     "productId": 49,
+     "name": "Google Nest Thermostat",
+     "price": "129",
+     "sellerId": 9,
+     "img": "https://store.google.com/us/product/nest_thermostat"
+   },
+   {
+     "productId": 50,
+     "name": "DJI OM 4 Smartphone Gimbal",
+     "price": "149",
+     "sellerId": 10,
+     "img": "https://www.dji.com/om-4"
+   }
+ ]
+ 

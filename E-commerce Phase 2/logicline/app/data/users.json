@@ -1,5 +1,4 @@
-{
-  "users": [
+[
     {
       "username": "nashwa",
       "password": "1234",
@@ -35,6 +34,115 @@
       "companyName": "Irshad",
       "bankAccount": "xyz",
       "role": "seller"
+    },
+    {
+      "Id": 5,
+      "firstName": "Michael",
+      "lastName": "Brown",
+      "username": "michaelbrown",
+      "password": "brownie",
+      "balance": 4500,
+      "shippingAddress": {
+        "city": "Miami",
+        "buildingNo": "1213",
+        "streetNo": "Ocean Drive"
+      },
+      "role": "customer"
+    },
+    {
+      "Id": 6,
+      "username": "seller1",
+      "password": "seller123",
+      "companyName": "FashionHub",
+      "bankAccount": "123456789",
+      "role": "seller"
+    },
+    {
+      "Id": 7,
+      "username": "seller2",
+      "password": "seller456",
+      "companyName": "ElectroMart",
+      "bankAccount": "987654321",
+      "role": "seller"
+    },
+    {
+      "Id": 8,
+      "username": "seller3",
+      "password": "seller789",
+      "companyName": "TechGadgets",
+      "bankAccount": "456789123",
+      "role": "seller"
+    },
+    {
+      "Id": 9,
+      "username": "seller4",
+      "password": "sellerabc",
+      "companyName": "HomeDecor",
+      "bankAccount": "789123456",
+      "role": "seller"
+    },
+    {
+      "Id": 10,
+      "username": "seller5",
+      "password": "sellerxyz",
+      "companyName": "BookStore",
+      "bankAccount": "321654987",
+      "role": "seller"
+    },
+    {
+      "Id": 11,
+      "firstName": "John",
+      "lastName": "Doe",
+      "username": "johndoe",
+      "password": "password123",
+      "balance": 5000,
+      "shippingAddress": {
+        "city": "New York",
+        "buildingNo": "123",
+        "streetNo": "Main Street"
+      },
+      "role": "customer"
+    },
+    {
+      "Id": 12,
+      "firstName": "Alice",
+      "lastName": "Smith",
+      "username": "alicesmith",
+      "password": "secret",
+      "balance": 6000,
+      "shippingAddress": {
+        "city": "Los Angeles",
+        "buildingNo": "456",
+        "streetNo": "Broadway"
+      },
+      "role": "customer"
+    },
+    {
+      "Id": 13,
+      "firstName": "Bob",
+      "lastName": "Johnson",
+      "username": "bobjohnson",
+      "password": "bob123",
+      "balance": 7000,
+      "shippingAddress": {
+        "city": "Chicago",
+        "buildingNo": "789",
+        "streetNo": "State Street"
+      },
+      "role": "customer"
+    },
+    {
+      "Id": 14,
+      "firstName": "Emily",
+      "lastName": "Davis",
+      "username": "emilydavis",
+      "password": "emily456",
+      "balance": 5500,
+      "shippingAddress": {
+        "city": "San Francisco",
+        "buildingNo": "1011",
+        "streetNo": "Market Street"
+      },
+      "role": "customer"
     }
-  ]
-}
+]
