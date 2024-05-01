@@ -1,0 +1,57 @@
+[
+    {
+        "id": 3,
+        "username": "zahraa",
+        "password": "1234",
+        "companyName": "shein",
+        "bankAccount": "xyz",
+        "role": "seller"
+      },
+      {
+        "id": 4,
+        "username": "fatima",
+        "password": "1234",
+        "companyName": "Irshad",
+        "bankAccount": "xyz",
+        "role": "seller"
+      },{
+        "id": 6,
+        "username": "seller1",
+        "password": "seller123",
+        "companyName": "FashionHub",
+        "bankAccount": "123456789",
+        "role": "seller"
+      },
+      {
+        "id": 7,
+        "username": "seller2",
+        "password": "seller456",
+        "companyName": "ElectroMart",
+        "bankAccount": "987654321",
+        "role": "seller"
+      },
+      {
+        "id": 8,
+        "username": "seller3",
+        "password": "seller789",
+        "companyName": "TechGadgets",
+        "bankAccount": "456789123",
+        "role": "seller"
+      },
+      {
+        "id": 9,
+        "username": "seller4",
+        "password": "sellerabc",
+        "companyName": "HomeDecor",
+        "bankAccount": "789123456",
+        "role": "seller"
+      },
+      {
+        "id": 10,
+        "username": "seller5",
+        "password": "sellerxyz",
+        "companyName": "BookStore",
+        "bankAccount": "321654987",
+        "role": "seller"
+      }
+]
