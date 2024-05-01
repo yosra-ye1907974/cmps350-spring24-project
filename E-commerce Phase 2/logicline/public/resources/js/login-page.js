@@ -6,10 +6,12 @@ window.onload = () => {
 
 async function getUsers() {
   try {
-    const response = await fetch("../users.json");
+    //username=${username}&password=${password}&role=${role}
+    const response = await fetch('/api/users');
     const jsonData = await response.json();
-    const { users } = jsonData;
-    allUsers = users;
+    console.log(jsonData)
+    // const { users } = jsonData;
+    allUsers = jsonData;
   } catch (error) {
     console.error("Error fetching JSON file:", error);
   }
@@ -23,6 +25,7 @@ function login() {
   const username = document.querySelector("#username").value;
   const password = document.querySelector("#password").value;
 
+  console.log(allUsers)
   let authenticatedUser = allUsers.find((u) => {
     return u.username === username && u.password === password;
   });
