@@ -4,140 +4,140 @@
     "name": "LG TV 42 inch",
     "price": 21999.0,
     "sellerId": 3,
-    "img": "http://www.lg.com/us/images/tvs/md05802269/gallery/medium01.jpg"
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAJ_BFTr5pOq76y78CBfs7ILVrrTHbg0A_1_XYRZy5Lw&s"
   },
   {
     "productId": 2,
     "name": "Sony PlayStation 5",
     "price": 499.0,
     "sellerId": 3,
-    "img": "https://www.sony.com/electronics/playstation"
+    "img": "https://gmedia.playstation.com/is/image/SIEPDC/ps5-product-thumbnail-01-en-14sep21?$facebook$"
   },
   {
     "productId": 3,
     "name": "Apple MacBook Pro 13-inch",
     "price": 1299.0,
     "sellerId": 3,
-    "img": "https://www.apple.com/macbook-pro-13/"
+    "img": "https://www.apple.com/newsroom/images/product/mac/standard/Apple-MacBook-Pro-M2-13-availability-June-2022-hero_big.jpg.large.jpg"
   },
   {
     "productId": 4,
     "name": "Samsung Galaxy S21 Ultra",
     "price": 1199.0,
     "sellerId": 3,
-    "img": "https://www.samsung.com/us/smartphones/galaxy-s21-ultra-5g/"
+    "img": "https://images.samsung.com/sg/smartphones/galaxy-s21/buy/s21_ultra_basicgroup_kv_mo_img.jpg"
   },
   {
     "productId": 5,
     "name": "DJI Mavic Air 2 Drone",
     "price": 799.0,
     "sellerId": 4,
-    "img": "https://www.dji.com/mavic-air-2"
+    "img": "https://cdn.mos.cms.futurecdn.net/hEiMkqvPVki9L9bCQevxi-320-80.jpg"
   },
   {
     "productId": 6,
     "name": "Bose QuietComfort 35 II Headphones",
     "price": 299.0,
     "sellerId": 4,
-    "img": "https://www.bose.com/en_us/products/headphones/noise_cancelling_headphones/quietcomfort-35-wireless-ii.html"
+    "img": "https://assets.bose.com/content/dam/cloudassets/Bose_DAM/Web/consumer_electronics/global/products/headphones/qc35_ii/product_silo_images/qc35_ii_le_midnight_blue_hero.PNG/_jcr_content/renditions/cq5dam.web.1280.1280.png"
   },
   {
     "productId": 7,
     "name": "Microsoft Xbox Series X",
     "price": 499.0,
     "sellerId": 4,
-    "img": "https://www.xbox.com/en-US/consoles/xbox-series-x"
+    "img": "https://assets.xboxservices.com/assets/12/03/1203d97e-4bf3-4b06-96e1-02d6cdeac337.jpg?n=Console-Compare_Image-1083_XSS-Duo_458x439_06.jpg"
   },
   {
     "productId": 8,
     "name": "HP Spectre x360 Laptop",
     "price": 1199.0,
     "sellerId": 4,
-    "img": "https://www8.hp.com/us/en/laptops/spectre-x360-13t-touch-laptop/overview.html"
+    "img": "https://www.hp.com/ca-en/shop/Html/Merch/Images/c07760620_1750x1285.jpg"
   },
   {
     "productId": 9,
     "name": "Google Pixel 6 Pro",
     "price": 899.0,
     "sellerId": 9,
-    "img": "https://store.google.com/us/product/pixel_6"
+    "img": "https://media.wired.com/photos/616e0b46436c4f5f5e47d166/1:1/w_1800,h_1800,c_limit/Gear-Google-Pixel-6-top.jpg"
   },
   {
     "productId": 10,
     "name": "GoPro HERO10 Black",
     "price": 499.0,
     "sellerId": 4,
-    "img": "https://gopro.com/en/us/shop/cameras/hero10-black/CHDHX-101-master.html"
+    "img": "https://static.gopro.com/assets/blta2b8522e5372af40/blt741c2a686796c4bf/61b7c3bf1bdbe25709ba76a9/GoPro_News_HERO10_Black.jpg"
   },
   {
     "productId": 11,
     "name": "LG OLED C1 55-inch TV",
     "price": 1699.0,
     "sellerId": 6,
-    "img": "https://www.lg.com/us/tvs/lg-oled55c1pub-oled-4k-tv"
+    "img": "https://www.lg.com/content/dam/channel/wcms/in/images/oled-tvs/oled-buying-guide/TV-OLED-Buying-Guide-06-Specs-Desktop-A-3.png"
   },
   {
     "productId": 12,
     "name": "Nintendo Switch",
     "price": 299.0,
     "sellerId": 7,
-    "img": "https://www.nintendo.com/switch/"
+    "img": "https://media.wired.com/photos/615cb6377aac0c0d8e7cfb3f/191:100/w_1280,c_limit/Gear-Nintendo-Switch-OLED.jpg"
   },
   {
     "productId": 13,
     "name": "Dell XPS 13 Laptop",
     "price": 999.0,
     "sellerId": 8,
-    "img": "https://www.dell.com/en-us/shop/dell-laptops/xps-13-laptop/spd/xps-13-9300-laptop"
+    "img": "https://media.wired.com/photos/60f72daa3b922f01a2083b7e/1:1/w_1226,h_1226,c_limit/Gear-Dell-XPS-13-2021.jpg"
   },
   {
     "productId": 14,
     "name": "OnePlus 9 Pro",
     "price": 969.0,
     "sellerId": 9,
-    "img": "https://www.oneplus.com/products/9-pro"
+    "img": "https://oasis.opstatics.com/content/dam/oasis/page/2021/new-navi/eu/pc/9pPineGreen.png"
   },
   {
     "productId": 15,
     "name": "Sony Alpha a7 III Mirrorless Camera",
     "price": 1999.0,
     "sellerId": 10,
-    "img": "https://www.sony.com/electronics/interchangeable-lens-cameras/ilce-7m3-body-kit"
+    "img": "https://images-cdn.ubuy.qa/65e8aaf2de12067796019430-sony-alpha-a7-iii-mirrorless-digital.jpg"
   },
   {
     "productId": 16,
     "name": "Samsung QLED Q80A 65-inch TV",
     "price": 1799.0,
     "sellerId": 6,
-    "img": "https://www.samsung.com/us/televisions-home-theater/tvs/qled-4k-tvs/65-class-q80a-qled-4k-uhd-hdr-smart-tv-2021-qn65q80aafxza/"
+    "img": "https://static.alaneesqatar.qa/2021/06/Samsung-QA65Q80AAUXQR-Q80A-QLED-4K-Smart-TV-2021-65-Inch.png"
   },
   {
     "productId": 17,
     "name": "Razer Blade 15 Gaming Laptop",
     "price": 1499.0,
     "sellerId": 7,
-    "img": "https://www.razer.com/gaming-laptops/razer-blade"
+    "img": "https://images-cdn.ubuy.qa/633abb10125e6102b8515cca-razer-blade-15-gaming-laptop-nvidia.jpg"
   },
   {
     "productId": 18,
     "name": "Apple iPhone 13 Pro",
     "price": 999.0,
     "sellerId": 8,
-    "img": "https://www.apple.com/iphone-13-pro/"
+    "img": "https://www.apple.com/newsroom/images/product/iphone/geo/Apple_iPhone-13-Pro_iPhone-13-Pro-Max_GEO_09142021_inline.jpg.slideshow-medium_2x.jpg"
   },
   {
     "productId": 19,
     "name": "LG Gram 17 Laptop",
     "price": 1499.0,
     "sellerId": 9,
-    "img": "https://www.lg.com/us/laptops/lg-17Z90P-K.AAB8U1-ultra-slim-laptop"
+    "img": "https://www.lg.com/content/dam/channel/wcms/uk/images/laptops/17z90r-k-aa79a1-eeuk-uk-c/gallery/dz-01.jpg"
   },
   {
     "productId": 20,
     "name": "DJI Phantom 4 Pro V2.0 Drone",
     "price": 1799.0,
     "sellerId": 10,
-    "img": "https://www.dji.com/phantom-4-pro-v2"
+    "img": "https://www1.djicdn.com/cms_uploads/product/cover/158/2f7c5218e19066402fd1503ee2f0de67%40374.jpg"
   },
   {
     "productId": 21,
