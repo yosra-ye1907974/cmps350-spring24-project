@@ -83,10 +83,12 @@ async function getUsers() {
     console.log(jsonData)
     // const { users } = jsonData;
     allUsers = jsonData;
+    getCurrentUser();
   } catch (error) {
     console.error("Error fetching JSON file:", error);
   }
 }
+
 
 function getCurrentUser() {
   const retrievedData = JSON.parse(localStorage.getItem("currentUser"));
@@ -97,7 +99,7 @@ function getCurrentUser() {
         u.password === retrievedData.password
       );
     });
-
+    console.log("this is the userr;;"+user);
     if (user) {
       User = user;
 
