@@ -14,13 +14,24 @@ window.onload = function () {
   }
 };
 
-textInput.addEventListener("input", function () {
-  let filterBy = textInput.value.trim();
-  const filteredItems = list.filter((item) => item.name.startsWith(filterBy));
-  displayOnThePage(filteredItems);
-});
+//Search Functionality
+textInput.addEventListener("input", search);
 
-async function getItems(filterBy) {
+async function search(){
+  let filterBy = textInput.value.trim();
+  try {
+    const response = await fetch(`/api/products?name=${filterBy}`);
+    const jsonData = await response.json();
+    console.log(jsonData)
+    list = jsonData;
+    displayOnThePage(list);
+  } catch (error) {
+    console.error("Error fetching JSON file:", error);
+  }
+}
+
+//Fetch all products 
+async function getItems() {
   try {
     const response = await fetch('/api/products');
     const jsonData = await response.json();

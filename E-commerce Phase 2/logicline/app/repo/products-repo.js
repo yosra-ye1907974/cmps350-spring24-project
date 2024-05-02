@@ -11,6 +11,20 @@ class ProductsRepo {
             return { error: error.message }
         }
     }
+
+   
+    async getProduct(searchText) {
+            try {
+                return  prisma.product.findMany({
+                    where: {
+                        name: { contains: searchText }     
+                    }
+                });
+            } catch (error) {
+                return { error: error.message };
+            }
+    }
+        
 }
 
 export default new ProductsRepo()
