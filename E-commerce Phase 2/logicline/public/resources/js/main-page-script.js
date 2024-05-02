@@ -40,7 +40,7 @@ function displayOnThePage(products) {
     article.classList.add("item");
     const figure = document.createElement("figure");
     const img = document.createElement("img");
-    img.src = product.image;
+    img.src = product.img;
     img.alt = product.name;
     figure.appendChild(img);
 
