@@ -5,8 +5,12 @@ class UserRepo {
 
     async getUsers() {
         try {
-            return prisma.customer.findMany(); //prisma.seller.findMany() //get 2 tables 
 
+            const customers = await prisma.customer.findMany();
+            const sellers = await prisma.seller.findMany();
+        
+            return customers.concat(sellers);
+            
         } catch (error) {
             return { error: error.message }
         }

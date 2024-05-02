@@ -22,7 +22,7 @@ async function search(){
   try {
     const response = await fetch(`/api/products?name=${filterBy}`);
     const jsonData = await response.json();
-    console.log(jsonData)
+    console.log(jsonData);
     list = jsonData;
     displayOnThePage(list);
   } catch (error) {
