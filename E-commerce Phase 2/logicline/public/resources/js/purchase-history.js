@@ -2,7 +2,6 @@ let allUsers = [];
 let User = {};
 
 
-
 window.onload = () => {
   window.getPurchaseHistory = getPurchaseHistory
   getUsers();
