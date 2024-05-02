@@ -1,3 +1,20 @@
+import { PrismaClient } from '@prisma/client'
+const prisma = new PrismaClient()
+
+class ProductsRepo {
+
+    async getProducts() {
+        try {
+            return prisma.product.findMany(); //prisma.seller.findMany() //get 2 tables 
+
+        } catch (error) {
+            return { error: error.message }
+        }
+    }
+}
+
+export default new ProductsRepo()
+
 // import fs from 'fs-extra'
 // import { nanoid } from 'nanoid'
 // import path from 'path'
@@ -45,19 +62,3 @@
 //         }
 //     }
 // }
-
-
-import { PrismaClient } from '@prisma/client'
-const prisma = new PrismaClient()
-
-class ProductsRepo {
-
-    async getProducts() {
-        try {
-            return prisma.product.findMany(); //prisma.seller.findMany() //get 2 tables 
-
-        } catch (error) {
-            return { error: error.message }
-        }
-    }
-}

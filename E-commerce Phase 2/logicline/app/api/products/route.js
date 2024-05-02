@@ -1,5 +1,4 @@
-import ProductsRepo from "@/app/repo/products-repo"
-const productsRepo = new ProductsRepo()
+import productsRepo from "@/app/repo/products-repo"
 
  
 export async function GET(request) {

@@ -22,10 +22,10 @@ textInput.addEventListener("input", function () {
 
 async function getItems(filterBy) {
   try {
-    const response = await fetch("../items.json");
+    const response = await fetch('/api/products');
     const jsonData = await response.json();
-    let { items } = jsonData;
-    list = items;
+    console.log(jsonData)
+    list = jsonData;
     displayOnThePage(list);
   } catch (error) {
     console.error("Error fetching JSON file:", error);
@@ -77,11 +77,12 @@ function displayOnThePage(products) {
 
 async function getUsers() {
   try {
-    const response = await fetch("../users.json");
+    //username=${username}&password=${password}&role=${role}
+    const response = await fetch('/api/users');
     const jsonData = await response.json();
-    const { users } = jsonData;
-    allUsers = users;
-    getCurrentUser();
+    console.log(jsonData)
+    // const { users } = jsonData;
+    allUsers = jsonData;
   } catch (error) {
     console.error("Error fetching JSON file:", error);
   }
