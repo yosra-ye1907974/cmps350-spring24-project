@@ -24,6 +24,18 @@ class ProductsRepo {
                 return { error: error.message };
             }
     }
+
+    async getCustomerPurchaseHistory(customerId) {
+        try {
+            return  prisma.purchase.findMany({
+                where: {
+                    customerId
+                }
+            });
+        } catch (error) {
+            return { error: error.message };
+        }
+    }
         
 }
 

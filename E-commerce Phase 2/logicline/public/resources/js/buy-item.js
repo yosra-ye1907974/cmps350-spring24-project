@@ -128,15 +128,12 @@ function editBalance(seluser, balance) {
 }
 
 
-//fetch users from json file
 async function getUsers() {
   try {
-    const response = await fetch("../users.json");
+    const response = await fetch('/api/users');
     const jsonData = await response.json();
-    const { users } = jsonData;
-    allUsers = users;
-
-    //get current user
+    console.log(jsonData)
+    allUsers = jsonData;
     getCurrentUser();
   } catch (error) {
     console.error("Error fetching JSON file:", error);

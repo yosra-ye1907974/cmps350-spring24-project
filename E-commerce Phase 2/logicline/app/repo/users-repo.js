@@ -8,7 +8,6 @@ class UserRepo {
 
             const customers = await prisma.customer.findMany();
             const sellers = await prisma.seller.findMany();
-        
             return customers.concat(sellers);
             
         } catch (error) {
