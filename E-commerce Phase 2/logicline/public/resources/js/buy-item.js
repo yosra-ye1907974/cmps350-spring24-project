@@ -74,9 +74,6 @@ window.onload = () => {
     }
     event.preventDefault();
 
-    const customerId = currentUser.id
-    const sellerId = selectedProduct.sellerId
-    const productId = selectedProduct.productId
     const address = "Qatar"
     purchaseDetails = {
       customerId: currentUser.id,
@@ -89,7 +86,8 @@ window.onload = () => {
     };
 
 
-    //edit purchase table and customer table
+    //edit purchase table table
+    const customerId = currentUser.id
     addPurchase(customerId, purchaseDetails)
 
     message.style.visibility = "visible";
@@ -112,44 +110,34 @@ window.onload = () => {
 
   closeButton.addEventListener("click", handleCloseBtn);
   function handleCloseBtn() {
-    // event.preventDefault();
+    event.preventDefault();
 
-    // currentUser.balance = parseInt(currentUser.balance) - parseInt(totalPrice);
+    currentUser.balance = parseInt(currentUser.balance) - parseInt(totalPrice);
 
-    // //update currentuser in local storage
-    // localStorage.setItem("currentUser", JSON.stringify(currentUser));
-    // editBalance(currentUser, totalPrice);
-    // window.location.href = "main-page.html";
+    //update currentuser in local storage
+    localStorage.setItem("currentUser", JSON.stringify(currentUser));
+    console.log(currentUser.id)
+    editBalance(currentUser.id, totalPrice);
+    //window.location.href = "main-page.html";
   }
 };
 
-// //edit current balance in json
-// function editBalance(seluser, balance) {
-//   const data = {
-//     username: seluser.username,
-//     password: seluser.password,
-//     balance,
-//   };
-
-//   //make call for edit balance in json file 
-//   fetch("http://localhost:3000/currentBalance", {
-//     method: "PUT",
-//     headers: {
-//       "Content-Type": "application/json",
-//     },
-//     body: JSON.stringify(data),
-//   })
-//     .then((response) => {
-//       if (response.ok) {
-//         console.log("Balance updated");
-//       } else {
-//         console.error(response.statusText);
-//       }
-//     })
-//     .catch((error) => {
-//       console.error("Request failed:", error);
-//     });
-// }
+//edit current balance in database
+async function editBalance(id, balance) {
+  console.log("inside the async " + id)
+  try {
+    const response = await fetch(`/api/users/${id}`, {
+        method: 'PUT',
+        body: balance,
+    });
+    if (!response.ok) {
+        throw new Error('Failed to add object');
+    }
+    console.log('Object added successfully!');
+} catch (error) {
+    console.error(error);
+}
+}
 
 
 async function getUsers() {

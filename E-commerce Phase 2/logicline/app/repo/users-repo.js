@@ -14,6 +14,16 @@ class UserRepo {
             return { error: error.message }
         }
     }
+    async updateBalance(customerId, balance){
+        try {
+            return  prisma.customer.update({
+                where: { id: customerId },
+                data: { balance },
+              });
+        } catch (error) {
+            return { error: error.message };
+        }
+    }
 
     async getCustomer(username, password) {
         try {

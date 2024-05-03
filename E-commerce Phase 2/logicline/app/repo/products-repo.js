@@ -46,6 +46,7 @@ class ProductsRepo {
             return { error: error.message };
         }
     }
+
 }
 
 export default new ProductsRepo()
