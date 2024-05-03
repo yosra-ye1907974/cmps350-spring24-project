@@ -36,7 +36,16 @@ class ProductsRepo {
             return { error: error.message };
         }
     }
-        
+       
+    async newPurchase(purchase){
+        try {
+            return  prisma.purchase.create({
+                data: purchase,
+              });
+        } catch (error) {
+            return { error: error.message };
+        }
+    }
 }
 
 export default new ProductsRepo()

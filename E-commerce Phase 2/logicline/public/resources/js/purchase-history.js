@@ -109,11 +109,11 @@ async function getPurchaseHistory() {
  
   let customerName = document.querySelector("#title");
   console.log("load table"+purchaseHistoryData)
-  // if (purchaseHistoryData) {
-  //   //changing h1 content
-  //   customerName.textContent =
-  //     purchaseHistoryData[0].username + "'s Purchasing History";
-  // }
+  if (purchaseHistoryData) {
+    //changing h1 content
+    customerName.textContent =
+      User.firstName + "'s Purchasing History";
+  }
   console.log(purchaseHistoryData);
   if (purchaseHistoryData) {
 

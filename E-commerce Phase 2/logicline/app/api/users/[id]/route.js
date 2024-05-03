@@ -6,3 +6,4 @@ export async function GET(request, { params }) {
     const purchaseHistory = await productsRepo.getCustomerPurchaseHistory(customerId);
     return Response.json(purchaseHistory, { status: 200 })
 }
+
