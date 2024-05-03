@@ -6,18 +6,25 @@ window.onload = () => {
 
   //get users for the nav bar to change
   getUsers();
-  let data = JSON.parse(localStorage.getItem("purchaseHistory"));
-
-  if (data) {
-    purchaseHistory = data;
+ //get current user
+ let currentUser = JSON.parse(localStorage.getItem("currentUser"));
+ if (currentUser.role != "customer") {
+   window.location.href = "main-page.html";
+ }
+ async function getPurchaseHistory() {
+  const customerId = currentUser.id
+  console.log("customer is: "+customerId)
+  try {
+    const response = await fetch(`/api/users/${customerId}`);
+    const jsonData = await response.json();
+    purchaseHistory = jsonData;
+  } catch (error) {
+    console.error("Error fetching JSON file:", error);
   }
+}
+  getPurchaseHistory();
 
-  //get current user
-  let currentUser = JSON.parse(localStorage.getItem("currentUser"));
-  if (currentUser.role != "customer") {
-    window.location.href = "main-page.html";
-  }
-
+ 
   let selectedProduct = JSON.parse(localStorage.getItem("selectedProduct"));
   let productImage = document.querySelector("#productImage");
   let productName = document.querySelector("#productName");
@@ -29,7 +36,7 @@ window.onload = () => {
   let balanceInfo = document.querySelector("#balanceInfo");
 
   if (selectedProduct) {
-    productImage.src = selectedProduct.image;
+    productImage.src = selectedProduct.img;
     productName.innerHTML = "";
     productName.value = selectedProduct.name;
     productPrice.value = selectedProduct.price;
@@ -55,12 +62,6 @@ window.onload = () => {
     }
   }
 
-  //generate unique id for the purchase
-  function uniqueId() {
-    const id = Math.floor(Math.random() * 1000) + new Date().getTime();
-    return id;
-  }
-
   //purchase and maintain history
   purchaseButton.addEventListener("click", purchase);
   function purchase() {
@@ -72,60 +73,83 @@ window.onload = () => {
       return;
     }
     event.preventDefault();
+
+    const customerId = currentUser.id
+    const sellerId = selectedProduct.sellerId
+    const productId = selectedProduct.productId
+    const address = "Qatar"
     purchaseDetails = {
-      orderId: uniqueId(),
-      ...currentUser,
-      ...selectedProduct,
-      totalQuantity,
-      totalPrice,
-      orderDate: new Date().toDateString(),
+      customerId: currentUser.id,
+      sellerId: selectedProduct.sellerId,
+      productId: selectedProduct.productId,
+      quantity: totalQuantity,
+      totalPrice: totalPrice,
+      date: new Date().toISOString,
+      shippingAddress: address
     };
-    purchaseHistory = [...purchaseHistory, purchaseDetails];
-    localStorage.setItem("purchaseHistory", JSON.stringify(purchaseHistory));
+
+
+    //edit purchase table and customer table
+    addPurchase(customerId, purchaseDetails)
 
     message.style.visibility = "visible";
   }
 
+  async function addPurchase(customerId, purchaseDetails){
+    try {
+      const response = await fetch(`/api/users/${customerId}/purchase`, {
+          method: 'POST',
+          body: JSON.stringify(purchaseDetails),
+      });
+      if (!response.ok) {
+          throw new Error('Failed to add object');
+      }
+      console.log('Object added successfully!');
+  } catch (error) {
+      console.error(error);
+  }
+  }
+
   closeButton.addEventListener("click", handleCloseBtn);
   function handleCloseBtn() {
-    event.preventDefault();
+    // event.preventDefault();
 
-    currentUser.balance = parseInt(currentUser.balance) - parseInt(totalPrice);
+    // currentUser.balance = parseInt(currentUser.balance) - parseInt(totalPrice);
 
-    //update currentuser in local storage
-    localStorage.setItem("currentUser", JSON.stringify(currentUser));
-    editBalance(currentUser, totalPrice);
-    window.location.href = "main-page.html";
+    // //update currentuser in local storage
+    // localStorage.setItem("currentUser", JSON.stringify(currentUser));
+    // editBalance(currentUser, totalPrice);
+    // window.location.href = "main-page.html";
   }
 };
 
-//edit current balance in json
-function editBalance(seluser, balance) {
-  const data = {
-    username: seluser.username,
-    password: seluser.password,
-    balance,
-  };
+// //edit current balance in json
+// function editBalance(seluser, balance) {
+//   const data = {
+//     username: seluser.username,
+//     password: seluser.password,
+//     balance,
+//   };
 
-  //make call for edit balance in json file 
-  fetch("http://localhost:3000/currentBalance", {
-    method: "PUT",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(data),
-  })
-    .then((response) => {
-      if (response.ok) {
-        console.log("Balance updated");
-      } else {
-        console.error(response.statusText);
-      }
-    })
-    .catch((error) => {
-      console.error("Request failed:", error);
-    });
-}
+//   //make call for edit balance in json file 
+//   fetch("http://localhost:3000/currentBalance", {
+//     method: "PUT",
+//     headers: {
+//       "Content-Type": "application/json",
+//     },
+//     body: JSON.stringify(data),
+//   })
+//     .then((response) => {
+//       if (response.ok) {
+//         console.log("Balance updated");
+//       } else {
+//         console.error(response.statusText);
+//       }
+//     })
+//     .catch((error) => {
+//       console.error("Request failed:", error);
+//     });
+// }
 
 
 async function getUsers() {
