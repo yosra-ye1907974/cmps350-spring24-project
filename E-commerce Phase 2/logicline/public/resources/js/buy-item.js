@@ -116,15 +116,13 @@ window.onload = () => {
 
     //update currentuser in local storage
     localStorage.setItem("currentUser", JSON.stringify(currentUser));
-    console.log(currentUser.id)
     editBalance(currentUser.id, totalPrice);
-    //window.location.href = "main-page.html";
+    window.location.href = "main-page.html";
   }
 };
 
 //edit current balance in database
 async function editBalance(id, balance) {
-  console.log("inside the async " + id)
   try {
     const response = await fetch(`/api/users/${id}`, {
         method: 'PUT',
