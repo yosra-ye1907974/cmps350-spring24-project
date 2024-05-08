@@ -47,6 +47,15 @@ class ProductsRepo {
         }
     }
 
+    // async top5Products(){
+    //     try {
+    //         return  prisma.purchase
+    //     } catch (error) {
+    //         return { error: error.message };
+    //     }
+    // }
+
+
 }
 
 export default new ProductsRepo()
