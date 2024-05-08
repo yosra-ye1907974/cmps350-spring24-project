@@ -74,7 +74,6 @@ window.onload = () => {
     }
     event.preventDefault();
 
-    const address = "Qatar"
     purchaseDetails = {
       customerId: currentUser.id,
       sellerId: selectedProduct.sellerId,
@@ -82,7 +81,7 @@ window.onload = () => {
       quantity: totalQuantity,
       totalPrice: totalPrice,
       date: new Date().toISOString,
-      shippingAddress: address
+      shippingAddress: currentUser.shippingAddress
     };
 
 
