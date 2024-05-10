@@ -1,13 +1,13 @@
 import React from 'react'
 import NavBar from './navBar/NavBar'
 import productsRepo from '../repo/products-repo'
+import styles from './../page.module.css'
 
 export default async function page() {
 
-  // let top3Products = await productsRepo.top5Products()
-  // if (!Array.isArray(top3Products)) {
-  //   top3Products = [top3Products] // Convert to array
-  // }
+  const top3Products = await productsRepo.top3Products()
+  const top3Customers = await productsRepo.top3Customers()
+  const top3Sellers = await productsRepo.top3Sellers()
 
   const res = await productsRepo.sumProfits()
   const profits = res._sum.totalPrice 
@@ -16,31 +16,45 @@ export default async function page() {
     <>
     <NavBar></NavBar>
     <main>
-    <div>
-    <div>
-          <p>2024 profits: {profits} QAR</p>
+    <div className={styles.card}>
+      <div>
+         <h3>Total profits: {profits} QAR </h3>
+          
       </div>
       <div>
-          <p>Top 3 Products</p>
+          <h3>Top 3 Products</h3>
           <ul>
+            {
+               top3Products.map( p=> <li>{p.name}</li>)
+            }
           </ul>
       </div>
       <div>
-          <p>Top 3 Countries</p>
+          <h3>Top 3 Customers</h3>
           <ul>
-            <li>1.</li>
-            <li>2.</li>
-            <li>3.</li>
+            {
+               top3Customers.map( c=> <li key={c.id}>{c.firstName +"  " +c.lastName}</li>)
+            }
           </ul>
       </div>
       <div>
-          <p>Total amount of purchases per product</p>
+          <h3>Top 3 Selling Companies</h3>
           <ul>
-            <li>1.</li>
-            <li>2.</li>
-            <li>3.</li>
+           {
+               top3Sellers.map( s=> <li key={s.id}>{s.companyName}</li>)
+            }
           </ul>
       </div>
+
+      <div>
+          <h3>Top 3 Selling Companies</h3>
+          <ul>
+           {
+               top3Sellers.map( s=> <li key={s.id}>{s.companyName}</li>)
+            }
+          </ul>
+      </div>
+      
     </div>
     </main>  
     </>

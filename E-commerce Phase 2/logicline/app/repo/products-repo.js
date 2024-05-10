@@ -47,21 +47,23 @@ class ProductsRepo {
         }
     }
 
-    async top5Products(){
+    //New use case: Shows the top 3 products purchased.
+    async top3Products(){
         try {
-            return await prisma.product.findMany({
+            return prisma.product.findMany({
+                include: {Purchase: true},
                 orderBy: {
                   Purchase: {
-                    count: 'desc',
-                  },
+                    _count: 'desc',
+                  }},
                   take: 3
-                }
               })
         } catch (error) {
             return { error: error.message };
         }
     }
 
+    //New use case: This methods shows the sum of all profits.
     async sumProfits(){
         try {
             return prisma.purchase.aggregate({ _sum: { totalPrice: true } })
@@ -70,8 +72,38 @@ class ProductsRepo {
         }
     }
 
+    //New use case: Top 3 active customers (purchase history)
+    async top3Customers(){
+        try {
+            return prisma.customer.findMany({
+                include: {Purchase: true},
+                orderBy: {
+                  Purchase: {
+                    _count: 'desc',
+                  }},
+                  take: 3
+              })
+        } catch (error) {
+            return { error: error.message };
+        }
+    }
 
 
+    //New use case: Top 3 active Sellers (by purchase)
+    async top3Sellers(){
+        try {
+            return prisma.seller.findMany({
+                include: {Purchase: true},
+                orderBy: {
+                  Purchase: {
+                    _count: 'desc',
+                  }},
+                  take: 3
+              })
+        } catch (error) {
+            return { error: error.message };
+        }
+    }
 }
 
 export default new ProductsRepo()
