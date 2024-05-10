@@ -32,7 +32,7 @@ export default async function page() {
          <h3 className={styles.heading}>Number of Customers Per Location</h3> 
          <ul>
             {
-               customersLocation.map( p=> <li>{p.shippingAddress + "  :   "+ p._count.id}</li>)
+               customersLocation.map( p=> <li key={p.id}>{p.shippingAddress + "  :   "+ p._count.id}</li>)
             }
           </ul>
       </div>
@@ -41,7 +41,7 @@ export default async function page() {
           <h3 className={styles.heading}>Top 3 Products</h3>
           <ul>
             {
-               top3Products.map( p=> <li>{p.name}</li>)
+               top3Products.map( p=> <li key={p.productId}>{p.name}</li>)
             }
           </ul>
       </div>
