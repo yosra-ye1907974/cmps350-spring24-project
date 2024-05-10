@@ -115,7 +115,7 @@ window.onload = () => {
 
     //update currentuser in local storage
     localStorage.setItem("currentUser", JSON.stringify(currentUser));
-    editBalance(currentUser.id, totalPrice);
+    editBalance(currentUser.id, currentUser.balance);
     window.location.href = "main-page.html";
   }
 };
