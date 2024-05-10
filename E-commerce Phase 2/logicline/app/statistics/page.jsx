@@ -8,7 +8,10 @@ export default async function page() {
   const top3Products = await productsRepo.top3Products()
   const top3Customers = await productsRepo.top3Customers()
   const top3Sellers = await productsRepo.top3Sellers()
+  const customersLocation = await productsRepo.customersCountPerLocation()
 
+  const avgCustomerSpend = await productsRepo.avgCustomerSpend()
+  const avg = avgCustomerSpend._avg.totalPrice
   const res = await productsRepo.sumProfits()
   const profits = res._sum.totalPrice 
 
@@ -18,9 +21,21 @@ export default async function page() {
     <main>
     <div className={styles.card}>
       <div>
-         <h3>Total profits: {profits} QAR </h3>
-          
+         <h3>Total profits: {profits} QAR </h3> 
       </div>
+      <div>
+          <h3>Average Customer Spend Per Purchase: {avg.toFixed(3)}</h3>
+      </div>
+
+      <div>
+         <h3>Number of Customers Per Location</h3> 
+         <ul>
+            {
+               customersLocation.map( p=> <li>{p.shippingAddress + "  :   "+ p._count.id}</li>)
+            }
+          </ul>
+      </div>
+
       <div>
           <h3>Top 3 Products</h3>
           <ul>

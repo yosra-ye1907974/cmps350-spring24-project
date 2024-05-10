@@ -104,6 +104,28 @@ class ProductsRepo {
             return { error: error.message };
         }
     }
+
+    //New use case: Average Customer Spend Per Purchase 
+    async avgCustomerSpend(){
+        try {
+            return  prisma.purchase.aggregate
+            ({ _avg: { totalPrice: true } });
+        } catch (error) {
+            return { error: error.message };
+        }
+    }
+
+    //New use case:  Customers count per location 
+    async customersCountPerLocation(){
+        try {
+            return prisma.customer.groupBy({
+                by: ["shippingAddress"],
+                _count: { id: true },
+              })
+        } catch (error) {
+            return { error: error.message };
+        }
+    }
 }
 
 export default new ProductsRepo()
