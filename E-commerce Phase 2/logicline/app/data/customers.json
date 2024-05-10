@@ -16,7 +16,7 @@
         "username": "michaelbrown",
         "password": "brownie",
         "balance": 4500,
-        "shippingAddress": "US",
+        "shippingAddress": "UAE",
         "role": "customer"
       }, {
         "id": 11,
@@ -25,7 +25,7 @@
         "username": "johndoe",
         "password": "password123",
         "balance": 5000,
-        "shippingAddress": "US",
+        "shippingAddress": "UK",
         "role": "customer"
       },
       {
@@ -35,7 +35,7 @@
         "username": "alicesmith",
         "password": "secret",
         "balance": 6000,
-        "shippingAddress": "US",
+        "shippingAddress": "UAE",
         "role": "customer"
       },
       {
@@ -45,7 +45,7 @@
         "username": "bobjohnson",
         "password": "bob123",
         "balance": 7000,
-        "shippingAddress": "US",
+        "shippingAddress": "UAE",
         "role": "customer"
       },
       {
