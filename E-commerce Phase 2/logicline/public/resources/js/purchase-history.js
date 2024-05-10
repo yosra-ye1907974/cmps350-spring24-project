@@ -60,8 +60,8 @@ window.onload = () => {
           anchorTodo.href = "/sale-record.html";
           todo.appendChild(anchorTodo);
         } else if (user.role === "admin") {
-          anchorTodo.textContent = "Dashboard";
-          anchorTodo.href = "/dashboard.html";
+          anchorTodo.textContent = "Statistics";
+        anchorTodo.href = "./statistics";
           todo.appendChild(anchorTodo);
         }
         //logout 
