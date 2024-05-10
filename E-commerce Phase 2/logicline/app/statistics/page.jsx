@@ -8,6 +8,7 @@ export default async function page() {
   const top3Products = await productsRepo.top3Products()
   const top3Customers = await productsRepo.top3Customers()
   const top3Sellers = await productsRepo.top3Sellers()
+  const top3SellersProducts = await productsRepo.top3SellersProducts()
   const customersLocation = await productsRepo.customersCountPerLocation()
 
   const avgCustomerSpend = await productsRepo.avgCustomerSpend()
@@ -62,10 +63,10 @@ export default async function page() {
       </div>
 
       <div>
-          <h3>Top 3 Selling Companies</h3>
+          <h3>Top 3 Companies owning Products on LogicLine</h3>
           <ul>
            {
-               top3Sellers.map( s=> <li key={s.id}>{s.companyName}</li>)
+               top3SellersProducts.map( s=> <li key={s.id}>{s.companyName}</li>)
             }
             
           </ul>

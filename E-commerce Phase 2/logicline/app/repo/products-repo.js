@@ -105,6 +105,20 @@ class ProductsRepo {
         }
     }
 
+    async top3SellersProducts(){
+        try {
+            return prisma.seller.findMany({
+                include: {Product: true},
+                orderBy: {
+                Product: {
+                    _count: 'desc',
+                  }},
+                  take: 3
+              })
+        } catch (error) {
+            return { error: error.message };
+        }
+    }
     //New use case: Average Customer Spend Per Purchase 
     async avgCustomerSpend(){
         try {
