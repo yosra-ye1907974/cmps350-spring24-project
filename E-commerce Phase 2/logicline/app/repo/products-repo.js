@@ -47,13 +47,29 @@ class ProductsRepo {
         }
     }
 
-    // async top5Products(){
-    //     try {
-    //         return  prisma.purchase
-    //     } catch (error) {
-    //         return { error: error.message };
-    //     }
-    // }
+    async top5Products(){
+        try {
+            return await prisma.product.findMany({
+                orderBy: {
+                  Purchase: {
+                    count: 'desc',
+                  },
+                  take: 3
+                }
+              })
+        } catch (error) {
+            return { error: error.message };
+        }
+    }
+
+    async sumProfits(){
+        try {
+            return prisma.purchase.aggregate({ _sum: { totalPrice: true } })
+        } catch (error) {
+            return { error: error.message };
+        }
+    }
+
 
 
 }
