@@ -5,7 +5,7 @@ class ProductsRepo {
 
     async getProducts() {
         try {
-            return prisma.product.findMany(); //prisma.seller.findMany() //get 2 tables 
+            return prisma.product.findMany(); 
 
         } catch (error) {
             return { error: error.message }

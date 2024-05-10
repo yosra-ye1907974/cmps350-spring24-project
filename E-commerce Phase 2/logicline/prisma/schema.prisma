@@ -10,8 +10,7 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-// generator dbml { provider = "prisma-dbml-generator"
-// }
+
 
 model Admin {
   username String
@@ -65,4 +64,8 @@ model Purchase {
   totalPrice      Float
   date            DateTime @default(now())
   shippingAddress String
+}
+
+generator dbml { 
+  provider = "prisma-dbml-generator"
 }

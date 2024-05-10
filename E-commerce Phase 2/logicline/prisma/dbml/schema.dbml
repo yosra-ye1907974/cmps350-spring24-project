@@ -1,0 +1,65 @@
+//// ------------------------------------------------------
+//// THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+//// ------------------------------------------------------
+
+Table Admin {
+  username String [not null]
+  password String [not null]
+  role String [not null]
+  id Int [pk, increment]
+}
+
+Table Customer {
+  id Int [pk, increment]
+  username String [not null]
+  password String [not null]
+  role String [not null]
+  firstName String [not null]
+  lastName String [not null]
+  balance Float [not null]
+  shippingAddress String [not null]
+  Purchase Purchase [not null]
+}
+
+Table Seller {
+  id Int [pk, increment]
+  username String [not null]
+  password String [not null]
+  role String [not null]
+  companyName String [not null]
+  bankAccount String [not null]
+  Product Product [not null]
+  Purchase Purchase [not null]
+}
+
+Table Product {
+  productId Int [pk, increment]
+  name String [not null]
+  price Float [not null]
+  img String [not null]
+  sellerId Int [not null]
+  Seller Seller [not null]
+  Purchase Purchase [not null]
+}
+
+Table Purchase {
+  purchaseId Int [pk, increment]
+  customerId Int [not null]
+  sellerId Int [not null]
+  productId Int [not null]
+  Customer Customer [not null]
+  Seller Seller [not null]
+  Product Product [not null]
+  quantity Int [not null]
+  totalPrice Float [not null]
+  date DateTime [default: `now()`, not null]
+  shippingAddress String [not null]
+}
+
+Ref: Product.sellerId > Seller.id
+
+Ref: Purchase.customerId > Customer.id
+
+Ref: Purchase.sellerId > Seller.id
+
+Ref: Purchase.productId > Product.productId
