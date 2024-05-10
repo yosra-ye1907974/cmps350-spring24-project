@@ -67,6 +67,7 @@ export default async function page() {
            {
                top3Sellers.map( s=> <li key={s.id}>{s.companyName}</li>)
             }
+            
           </ul>
       </div>
       
