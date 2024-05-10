@@ -12,7 +12,18 @@ class ProductsRepo {
         }
     }
 
-   
+    async  getProductById(productId) {
+        try {
+            return  prisma.product.findUnique({
+                where: {
+                    productId: productId
+                }
+            });
+        } catch (error) {
+            return { error: error.message };
+        }
+    }
+    
     async getProduct(searchText) {
             try {
                 return  prisma.product.findMany({

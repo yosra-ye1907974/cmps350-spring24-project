@@ -1,8 +1,9 @@
 import ProductsRepo from "@/app/repo/products-repo"
-const productsRepo = new ProductsRepo()
+
 
 export async function GET(request, { params }){
-    const productId = params.id
-    const product = await productsRepo.getProduct(productId)
+    const id = params.id
+    const productId = Number.parseInt(id)
+    const product = await ProductsRepo.getProductById(productId)
     return Response.json(product, { status: 200 })
 }
