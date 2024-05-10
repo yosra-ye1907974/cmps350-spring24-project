@@ -184,8 +184,8 @@ function getCurrentUser() {
         anchorTodo.href = "/sale-record.html";
         todo.appendChild(anchorTodo);
       } else if (user.role === "admin") {
-        anchorTodo.textContent = "Statistics";
-        anchorTodo.href = "./statistics";
+        anchorTodo.textContent = "Dashboard";
+        anchorTodo.href = "/dashboard.html";
         todo.appendChild(anchorTodo);
       }
 

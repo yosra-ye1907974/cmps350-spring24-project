@@ -71,8 +71,8 @@ window.onload = () => {
           anchorTodo.style.textShadow = "2px 2px 4px rgba(0, 0, 0, 0.5)";
           todo.appendChild(anchorTodo);
         } else if (user.role === "admin") {
-          anchorTodo.textContent = "Statistics";
-          anchorTodo.href = "./statistics";
+          anchorTodo.textContent = "Dashboard";
+          anchorTodo.href = "/dashboard.html";
           todo.appendChild(anchorTodo);
         }
         //logout

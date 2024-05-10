@@ -21,14 +21,14 @@ export default async function page() {
     <main>
     <div className={styles.card}>
       <div>
-         <h3>1. Total profits: {profits} QAR </h3> 
+         <h3>Total profits: {profits} QAR </h3> 
       </div>
       <div>
-          <h3>2. Average Customer Spend Per Purchase: {avg.toFixed(3)}</h3>
+          <h3>Average Customer Spend Per Purchase: {avg.toFixed(3)}</h3>
       </div>
 
       <div>
-         <h3>3. Number of Customers Per Location</h3> 
+         <h3>Number of Customers Per Location</h3> 
          <ul>
             {
                customersLocation.map( p=> <li>{p.shippingAddress + "  :   "+ p._count.id}</li>)
@@ -37,7 +37,7 @@ export default async function page() {
       </div>
 
       <div>
-          <h3>4. Top 3 Products</h3>
+          <h3>Top 3 Products</h3>
           <ul>
             {
                top3Products.map( p=> <li>{p.name}</li>)
@@ -45,7 +45,7 @@ export default async function page() {
           </ul>
       </div>
       <div>
-          <h3>5. Top 3 Customers</h3>
+          <h3>Top 3 Customers</h3>
           <ul>
             {
                top3Customers.map( c=> <li key={c.id}>{c.firstName +"  " +c.lastName}</li>)
@@ -53,7 +53,16 @@ export default async function page() {
           </ul>
       </div>
       <div>
-          <h3>6. Top 3 Selling Companies</h3>
+          <h3>Top 3 Selling Companies</h3>
+          <ul>
+           {
+               top3Sellers.map( s=> <li key={s.id}>{s.companyName}</li>)
+            }
+          </ul>
+      </div>
+
+      <div>
+          <h3>Top 3 Selling Companies</h3>
           <ul>
            {
                top3Sellers.map( s=> <li key={s.id}>{s.companyName}</li>)
