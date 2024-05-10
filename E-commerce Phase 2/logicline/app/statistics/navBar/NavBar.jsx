@@ -1,6 +1,7 @@
 'use client'
 import React from 'react'
 import Link from 'next/link'
+import styles from "@/app/page.module.css";
 
 export default function NavBar( { choice } ) {
 
@@ -13,11 +14,11 @@ export default function NavBar( { choice } ) {
   
   return (
    <>
-    <nav>
-      <ul>
-        <li><Link id="inpage" href="./main-page.html">Home</Link></li>
-        <li id="username">{currentUser.username + "( "+currentUser.role + " )"}</li>
-        <li id="loginLogout"><Link href="./main-page.html" onClick={handleLogout}>Logout</Link></li>
+    <nav className={styles.nav}>
+      <ul className={styles.navUl}>
+        <li><Link id="inpage" href="./main-page.html" className={styles.navLink}>Home</Link></li>
+        <li id="username" >{currentUser.username + "( "+currentUser.role + " )"}</li>
+        <li id="loginLogout"><Link href="./main-page.html" onClick={handleLogout} className={styles.navLink}>Logout</Link></li>
       </ul>
     </nav>
    </>

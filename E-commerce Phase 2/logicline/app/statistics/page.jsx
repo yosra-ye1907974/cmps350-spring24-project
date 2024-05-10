@@ -20,15 +20,15 @@ export default async function page() {
     <>
     <NavBar></NavBar>
     <main>
-    <div className={styles.card}>
-      <div>
+    <div className={styles.main}>
+      <div className={styles.card}>
          <h3>Total profits: {profits} QAR </h3> 
       </div>
-      <div>
+      <div className={styles.card}>
           <h3>Average Customer Spend Per Purchase: {avg.toFixed(3)}</h3>
       </div>
 
-      <div>
+      <div className={styles.card}>
          <h3>Number of Customers Per Location</h3> 
          <ul>
             {
@@ -37,7 +37,7 @@ export default async function page() {
           </ul>
       </div>
 
-      <div>
+      <div className={styles.card}>
           <h3>Top 3 Products</h3>
           <ul>
             {
@@ -45,7 +45,7 @@ export default async function page() {
             }
           </ul>
       </div>
-      <div>
+      <div className={styles.card}>
           <h3>Top 3 Customers</h3>
           <ul>
             {
@@ -53,7 +53,7 @@ export default async function page() {
             }
           </ul>
       </div>
-      <div>
+      <div className={styles.card}>
           <h3>Top 3 Selling Companies</h3>
           <ul>
            {
@@ -62,7 +62,7 @@ export default async function page() {
           </ul>
       </div>
 
-      <div>
+      <div className={styles.card}>
           <h3>Top 3 Companies owning Products on LogicLine</h3>
           <ul>
            {
